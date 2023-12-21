@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import { I18nextProvider } from "react-i18next";
 
 import Router from "./router";
@@ -13,4 +13,6 @@ const App = () => (
   </BrowserRouter>
 );
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const container = document.getElementById('root');
+const root = createRoot(container!);
+root.render(<App />);

@@ -16,9 +16,9 @@ const CalApp = ({ id }: { id: string }) => {
     (async function () {
       const cal = await getCalApi();
       cal("ui", {
-        "styles": { "branding": { "brandColor": "#18216d" } },
-        "hideEventTypeDetails": false,
-        "layout": "month_view"
+        styles: { "branding": { "brandColor": "#18216d" } },
+        hideEventTypeDetails: false,
+        layout: "month_view"
       });
     })();
   }, [])
