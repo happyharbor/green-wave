@@ -1,6 +1,15 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { notification } from "antd";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
+
+interface FormElements extends HTMLFormControlsCollection {
+  email: HTMLInputElement
+  message: HTMLInputElement
+  name: HTMLInputElement
+}
+interface ContactFormElement extends HTMLFormElement {
+  readonly elements: FormElements
+}
 
 export const useForm = (validate: any) => {
   const [values, setValues] = useState({});
@@ -14,20 +23,24 @@ export const useForm = (validate: any) => {
     });
   };
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<ContactFormElement>) => {
     event.preventDefault();
     setErrors(validate(values));
     // Your url for API
-    const url = "";
-    if (Object.keys(values).length === 3) {
-      axios
-        .post(url, {
-          ...values,
-        })
-        .then(() => {
-          setShouldSubmit(true);
-        });
-    }
+
+    const templateParams = {
+      name: event.currentTarget.elements.name.value,
+      email: event.currentTarget.elements.email.value,
+      message: event.currentTarget.elements.message.value,
+    };
+
+    emailjs.send('service_5oqg10j', 'template_wxbgvux', templateParams, 'XCXE1g8cpfoIWxoIk')
+      .then(response => {
+        console.log('SUCCESS!', response.status, response.text);
+        setShouldSubmit(true);
+      }, error => {
+        console.log('FAILED...', error);
+      });
   };
 
   useEffect(() => {

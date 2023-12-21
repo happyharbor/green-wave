@@ -46,12 +46,15 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall onClick={() => scrollTo("product")}>
           <Span>{t("Product")}</Span>
         </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
+          <Span>{t("Contact")}</Span>
+        </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
+          onClick={() => scrollTo("bookme")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button>{t("Book me")}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
