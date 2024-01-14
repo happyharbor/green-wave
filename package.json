@@ -2,10 +2,12 @@
   "name": "green-wave",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo run build --cache-dir=.turbo",
+    "dev": "turbo run dev --parallel --concurrency=20",
+    "lint": "turbo run lint --continue",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean && rm -rf .turbo",
+    "update": "turbo run update  --continue --concurrency=1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
