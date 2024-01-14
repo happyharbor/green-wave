@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { notification } from "antd";
 import emailjs from "@emailjs/browser";
 
