@@ -8,6 +8,7 @@ applications:
         build:
           commands:
             - npx turbo run build --filter=landing-page
+            - cd apps/landing-page && ls
       artifacts:
         baseDirectory: apps/landing-page/build
         files:
