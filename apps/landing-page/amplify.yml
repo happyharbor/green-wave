@@ -1,0 +1,19 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - npx pnpm install
+        build:
+          commands:
+            - npx turbo run build --filter=landing-page
+      artifacts:
+        baseDirectory: apps/landing-page/build
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+      buildPath: /
+    appRoot: apps/landing-page
