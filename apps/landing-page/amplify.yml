@@ -5,6 +5,7 @@ applications:
         preBuild:
           commands:
             - npx pnpm install
+            - pnpm add turbo --save-dev --ignore-workspace-root-check
         build:
           commands:
             - npx turbo run build --filter=landing-page
