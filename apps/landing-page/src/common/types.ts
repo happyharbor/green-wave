@@ -23,11 +23,7 @@ export interface InputProps {
   t: any;
   type?: string;
   value?: string;
-  onChange: (
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 export interface validateProps {

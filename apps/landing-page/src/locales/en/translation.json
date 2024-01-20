@@ -1,4 +1,5 @@
 {
+  "Book Me": "Book Me",
   "About": "About",
   "Policy": "Policy",
   "Mission": "Mission",
@@ -24,5 +25,17 @@
   "Name" : "Name",
   "Your Name": "Your Name",
   "Email" : "Email",
-  "Your Email": "Your Email"
+  "Your Email": "Your Email",
+  "Title" : "Welcome to GreenWave Your Green Digital Partner",
+  "What We Do" : "What We Do",
+  "WhatWeDoContent": "At GreenWave, we believe in the power of sustainability. As a Green Digital Agency, we are committed to providing eco-friendly solutions that empower businesses to reduce their environmental footprint while thriving in the digital world. Join us on a journey towards a greener and more sustainable future.",
+  "Why Green Wave" : "Why Green Wave",
+  "Opting for sustainability-driven solutions": "Opting for sustainability-driven solutions",
+  "OptingForSustainabilityContent": "Embrace a partnership that goes beyond conventional services. By choosing us, you align your business with environmental excellence. Our commitment to green practices ensures that every digital move contributes to a more sustainable planet.",
+  "Utilizing cutting-edge eco-friendly technologies": "Utilizing cutting-edge eco-friendly technologies",
+  "UtilizingCuttingEdgeContent": "Stay ahead in the digital landscape with our innovative green technologies. We employ state-of-the-art solutions that not only enhance your online presence but also significantly reduce your carbon footprint. Be a trailblazer in both technology and environmental responsibility.",
+  "Demonstrated success with like-minded businesses": "Demonstrated success with like-minded businesses",
+  "DemonstratedSuccessContent": "Join a roster of successful businesses that have thrived with our green solutions. Our proven track record showcases how we've helped companies like yours achieve their sustainability goals while achieving digital success. Your success story begins here.",
+  "Offering a holistic sustainability strategy": "Offering a holistic sustainability strategy",
+  "OfferingAHolisticContent": "Experience a comprehensive approach to sustainability. We don't just provide services; we offer a roadmap for your business to become truly green. From eco-friendly web hosting to website optimization and employee training, our holistic strategy ensures every aspect of your digital presence is environmentally responsible."
 }

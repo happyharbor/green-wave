@@ -1,23 +1,11 @@
-import { Row, Col } from "antd";
-import { withTranslation } from "react-i18next";
-import { Slide } from "react-awesome-reveal";
-import { Button } from "../../common/Button";
-import { MiddleBlockSection, Content, ContentWrapper } from "./styles";
-
-interface MiddleBlockProps {
-  title: string;
-  content: string;
-  button: string;
-  t: any;
-}
+import { Row, Col } from 'antd';
+import { Slide } from 'react-awesome-reveal';
+import { withTranslation } from 'react-i18next';
+import { Button } from '../../common/Button';
+import { MiddleBlockSection, Content, ContentWrapper } from './styles';
+import { MiddleBlockProps } from './types';
 
 const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   return (
     <MiddleBlockSection>
       <Slide direction="up">
@@ -27,8 +15,8 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
               {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
-                  {t(button)}
+                <Button name={button.title} onClick={button.onClick}>
+                  {t(button.title)}
                 </Button>
               )}
             </Col>

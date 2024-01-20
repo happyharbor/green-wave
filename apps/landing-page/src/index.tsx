@@ -1,9 +1,8 @@
-import { BrowserRouter } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
-import { I18nextProvider } from "react-i18next";
-
-import Router from "./router";
-import i18n from "./translation";
+import { I18nextProvider } from 'react-i18next';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './router';
+import i18n from './translation';
 
 const App = () => (
   <BrowserRouter>

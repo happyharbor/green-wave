@@ -1,30 +1,12 @@
-import { Row, Col } from "antd";
-import { withTranslation } from "react-i18next";
-import { SvgIcon } from "../../../common/SvgIcon";
-import { Button } from "../../../common/Button";
-import { ContentBlockProps } from "../types";
-import { Fade } from "react-awesome-reveal";
-import {
-  RightBlockContainer,
-  Content,
-  ContentWrapper,
-  ButtonWrapper,
-} from "./styles";
+import { Row, Col } from 'antd';
+import { Fade } from 'react-awesome-reveal';
+import { withTranslation } from 'react-i18next';
+import { Button } from '../../../common/Button';
+import { SvgIcon } from '../../../common/SvgIcon';
+import { ContentBlockButtonProps, ContentBlockProps } from '../types';
+import { RightBlockContainer, Content, ContentWrapper, ButtonWrapper } from './styles';
 
-const RightBlock = ({
-  title,
-  content,
-  button,
-  icon,
-  t,
-  id,
-}: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+const RightBlock = ({ title, content, buttons, icon, t, id }: ContentBlockProps) => {
   return (
     <RightBlockContainer>
       <Fade direction="right">
@@ -32,17 +14,12 @@ const RightBlock = ({
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
+              {content && <Content>{t(content)}</Content>}
               <ButtonWrapper>
-                {typeof button === "object" &&
-                  button.map((item: any, id: number) => {
+                {typeof buttons === 'object' &&
+                  buttons.map((item: ContentBlockButtonProps, id: number) => {
                     return (
-                      <Button
-                        key={id}
-                        color={item.color}
-                        fixedWidth={true}
-                        onClick={() => scrollTo("about")}
-                      >
+                      <Button key={id} color={item.color} fixedWidth={true} onClick={item.onClick}>
                         {t(item.title)}
                       </Button>
                     );

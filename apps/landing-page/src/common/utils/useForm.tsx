@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-import { notification } from "antd";
-import emailjs from "@emailjs/browser";
+import { notification } from 'antd';
+import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 
 interface FormElements extends HTMLFormControlsCollection {
-  email: HTMLInputElement
-  message: HTMLInputElement
-  name: HTMLInputElement
+  email: HTMLInputElement;
+  message: HTMLInputElement;
+  name: HTMLInputElement;
 }
 interface ContactFormElement extends HTMLFormElement {
-  readonly elements: FormElements
+  readonly elements: FormElements;
 }
 
 export const useForm = (validate: any) => {
@@ -17,9 +17,9 @@ export const useForm = (validate: any) => {
   const [shouldSubmit, setShouldSubmit] = useState(false);
 
   const openNotificationWithIcon = () => {
-    notification["success"]({
-      message: "Success",
-      description: "Your message has been sent!",
+    notification['success']({
+      message: 'Success',
+      description: 'Your message has been sent!',
     });
   };
 
@@ -34,18 +34,20 @@ export const useForm = (validate: any) => {
       message: event.currentTarget.elements.message.value,
     };
 
-    emailjs.send('service_5oqg10j', 'template_wxbgvux', templateParams, 'XCXE1g8cpfoIWxoIk')
-      .then(response => {
+    emailjs.send('service_5oqg10j', 'template_wxbgvux', templateParams, 'XCXE1g8cpfoIWxoIk').then(
+      (response) => {
         console.log('SUCCESS!', response.status, response.text);
         setShouldSubmit(true);
-      }, error => {
+      },
+      (error) => {
         console.log('FAILED...', error);
-      });
+      },
+    );
   };
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
-      setValues("");
+      setValues('');
       openNotificationWithIcon();
     }
   }, [errors, shouldSubmit]);
@@ -56,7 +58,7 @@ export const useForm = (validate: any) => {
       ...values,
       [event.target.name]: event.target.value,
     }));
-    setErrors((errors) => ({ ...errors, [event.target.name]: "" }));
+    setErrors((errors) => ({ ...errors, [event.target.name]: '' }));
   };
 
   return {

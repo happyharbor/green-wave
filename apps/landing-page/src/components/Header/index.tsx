@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Row, Col, Drawer } from "antd";
-import { withTranslation } from "react-i18next";
-import Container from "../../common/Container";
-import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
+import { Row, Col, Drawer } from 'antd';
+import { useState } from 'react';
+import { withTranslation } from 'react-i18next';
+import { Button } from '../../common/Button';
+import Container from '../../common/Container';
+import { SvgIcon } from '../../common/SvgIcon';
 import {
   HeaderSection,
   LogoContainer,
@@ -14,7 +14,7 @@ import {
   Label,
   Outline,
   Span,
-} from "./styles";
+} from './styles';
 
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
@@ -31,30 +31,27 @@ const Header = ({ t }: any) => {
     const scrollTo = (id: string) => {
       const element = document.getElementById(id) as HTMLDivElement;
       element.scrollIntoView({
-        behavior: "smooth",
+        behavior: 'smooth',
       });
       setVisibility(false);
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('about')}>
+          <Span>{t('About')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('mission')}>
+          <Span>{t('Mission')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('product')}>
+          <Span>{t('Product')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
-          <Span>{t("Contact")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('contact')}>
+          <Span>{t('Contact')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("bookme")}
-        >
+        <CustomNavLinkSmall style={{ width: '180px' }} onClick={() => scrollTo('bookme')}>
           <Span>
-            <Button>{t("Book me")}</Button>
+            <Button>{t('Book me')}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -76,7 +73,7 @@ const Header = ({ t }: any) => {
           </Burger>
         </Row>
         <Drawer closable={false} open={visible} onClose={onClose}>
-          <Col style={{ marginBottom: "2.5rem" }}>
+          <Col style={{ marginBottom: '2.5rem' }}>
             <Label onClick={onClose}>
               <Col span={12}>
                 <Menu>Menu</Menu>

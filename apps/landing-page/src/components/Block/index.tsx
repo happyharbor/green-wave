@@ -1,5 +1,5 @@
-import { withTranslation } from "react-i18next";
-import { Container, TextWrapper, Content } from "./styles";
+import { withTranslation } from 'react-i18next';
+import { Container, TextWrapper, Content } from './styles';
 
 interface Props {
   title: string;

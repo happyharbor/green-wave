@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { MenuOutlined } from "@ant-design/icons";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { MenuOutlined } from '@ant-design/icons';
 
-export const HeaderSection = styled("header")`
+export const HeaderSection = styled('header')`
   padding: 1rem 0.5rem;
 
   .ant-row-space-between {
@@ -15,12 +15,12 @@ export const LogoContainer = styled(Link)`
   display: flex;
 `;
 
-export const NavLink = styled("div")`
+export const NavLink = styled('div')`
   display: inline-block;
   text-align: center;
 `;
 
-export const CustomNavLink = styled("div")`
+export const CustomNavLink = styled('div')`
   width: 203px;
   display: inline-block;
 
@@ -33,16 +33,16 @@ export const CustomNavLink = styled("div")`
   }
 `;
 
-export const ContactWrapper = styled("div")<any>`
+export const ContactWrapper = styled('div')<any>`
   cursor: pointer;
-  width: ${(p) => (p.width ? "100%" : "110px")};
+  width: ${(p) => (p.width ? '100%' : '110px')};
   font-weight: 700;
   text-align: center;
   border-radius: 1.25rem;
   display: inline-block;
 `;
 
-export const Burger = styled("div")`
+export const Burger = styled('div')`
   @media only screen and (max-width: 890px) {
     display: block;
   }
@@ -54,13 +54,13 @@ export const Burger = styled("div")`
   }
 `;
 
-export const NotHidden = styled("div")`
+export const NotHidden = styled('div')`
   @media only screen and (max-width: 890px) {
     display: none;
   }
 `;
 
-export const Menu = styled("h5")`
+export const Menu = styled('h5')`
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
@@ -77,7 +77,7 @@ export const CustomNavLinkSmall = styled(NavLink)`
   }
 `;
 
-export const Label = styled("span")`
+export const Label = styled('span')`
   font-weight: 500;
   color: #404041;
   text-align: right;
@@ -90,7 +90,7 @@ export const Outline = styled(MenuOutlined)<any>`
   font-size: 22px;
 `;
 
-export const Span = styled("span")`
+export const Span = styled('span')`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
