@@ -20,7 +20,7 @@ export const StyledContainer = styled('div')<{ $border?: boolean }>`
   }
 
   @media only screen and (max-width: 414px) {
-    max-width: 100%;
+    max-width: calc(100% - 38px);
     padding: 0 18px;
   }
 `;

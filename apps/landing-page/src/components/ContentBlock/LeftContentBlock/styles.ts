@@ -23,8 +23,8 @@ export const ContentWrapper = styled('div')`
 `;
 
 export const ServiceWrapper = styled('div')`
-  max-width: 70%;
-  margin-left: 15%;
+  max-width: 90%;
+  margin-left: 5%;
 `;
 
 export const MinTitle = styled('h6')`

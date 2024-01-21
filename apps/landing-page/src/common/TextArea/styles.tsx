@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledContainer = styled('div')`
   display: inline-block;
-  width: 100%;
+  width: 90%;
   padding: 10px 5px;
   margin-bottom: -0.625rem;
 `;
