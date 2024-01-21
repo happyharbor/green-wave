@@ -1,12 +1,10 @@
 import { lazy } from 'react';
-import { withTranslation } from 'react-i18next';
+import { withTranslation, WithTranslation } from 'react-i18next';
 import CallApp from '../../components/CalApp';
-import AboutContent from '../../content/AboutContent.json';
-import ContactContent from '../../content/ContactContent.json';
+import { contactContent } from '../../content/ContactContent';
 import { introContent } from '../../content/IntroContent';
 import { whatWeDoContent } from '../../content/MiddleBlockContent';
-import MissionContent from '../../content/MissionContent.json';
-import ProductContent from '../../content/ProductContent.json';
+import { services } from '../../content/Services';
 import { whyUs } from '../../content/whyUs';
 
 const Contact = lazy(() => import('../../components/ContactForm'));
@@ -16,7 +14,7 @@ const ScrollToTop = lazy(() => import('../../common/ScrollToTop'));
 const ContentBlock = lazy(() => import('../../components/ContentBlock'));
 const ColumnBlock = lazy(() => import('../../components/ColumnBlock'));
 
-const Home = ({ t }: any) => {
+const Home = ({ t }: WithTranslation) => {
   return (
     <Container>
       <ScrollToTop />
@@ -27,31 +25,22 @@ const Home = ({ t }: any) => {
         icon="developer.svg"
         id="intro"
       />
-      <MiddleBlock title={whatWeDoContent.title} content={whatWeDoContent.content} button={whatWeDoContent.button} />
-      <ColumnBlock columnBlocks={whyUs} title={'Why Green Wave'} />
+      <MiddleBlock
+        title={whatWeDoContent.title}
+        content={whatWeDoContent.content}
+        button={whatWeDoContent.button}
+        id="whatWeDo"
+      />
+      <ColumnBlock columnBlocks={whyUs} title={'Why Green Wave'} id="whyGreenWave" />
       <ContentBlock
         type="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
+        title={services.title}
+        content={services.content}
+        buttons={services.buttons}
         icon="graphs.svg"
-        id="about"
+        id="services"
       />
-      <ContentBlock
-        type="right"
-        title={MissionContent.title}
-        content={MissionContent.text}
-        icon="product-launch.svg"
-        id="mission"
-      />
-      <ContentBlock
-        type="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
-      />
-      <Contact title={ContactContent.title} content={ContactContent.text} id="contact" />
+      <Contact title={contactContent.title} content={contactContent.content} id="contact" />
       <CallApp id="bookme" />
     </Container>
   );

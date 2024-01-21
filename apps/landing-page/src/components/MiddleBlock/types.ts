@@ -1,6 +1,7 @@
 import { ContentBlockButtonProps } from '../ContentBlock/types';
 
 export interface MiddleBlockProps extends MiddleBlockPageProps {
+  id: string;
   t: any;
 }
 

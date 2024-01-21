@@ -37,14 +37,14 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo('about')}>
-          <Span>{t('About')}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('whatWeDo')}>
+          <Span>{t('What we do')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo('mission')}>
-          <Span>{t('Mission')}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('whyGreenWave')}>
+          <Span>{t('Why Us')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo('product')}>
-          <Span>{t('Product')}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('services')}>
+          <Span>{t('Services')}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo('contact')}>
           <Span>{t('Contact')}</Span>

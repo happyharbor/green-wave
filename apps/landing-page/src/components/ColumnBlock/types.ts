@@ -1,5 +1,8 @@
+import { WithTranslation } from 'react-i18next';
+
 export interface ColumnBlockProps {
-  t: any;
+  id: string;
+  t: WithTranslation['t'];
   title: string;
   columnBlocks: ColumnBlockPageProps[];
 }
