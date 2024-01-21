@@ -1,5 +1,10 @@
 import { ContentBlockButtonProps } from '../ContentBlock/types';
 
+export interface SectionBlockProps {
+  title: string;
+  content: string;
+  image: string;
+}
 export interface MiddleBlockProps extends MiddleBlockPageProps {
   id: string;
   t: any;
@@ -8,5 +13,6 @@ export interface MiddleBlockProps extends MiddleBlockPageProps {
 export interface MiddleBlockPageProps {
   title: string;
   content?: string;
-  button: ContentBlockButtonProps;
+  button?: ContentBlockButtonProps;
+  section?: SectionBlockProps[];
 }

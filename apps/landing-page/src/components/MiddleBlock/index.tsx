@@ -1,11 +1,13 @@
-import { Row, Col } from 'antd';
+import { Row, Col, Image } from 'antd';
 import { Slide } from 'react-awesome-reveal';
 import { withTranslation } from 'react-i18next';
 import { Button } from '../../common/Button';
+import { SvgIcon } from '../../common/SvgIcon';
+import { MinPara, MinTitle, ServiceWrapper } from '../ContentBlock/LeftContentBlock/styles';
 import { MiddleBlockSection, Content, ContentWrapper } from './styles';
-import { MiddleBlockProps } from './types';
+import { MiddleBlockProps, SectionBlockProps } from './types';
 
-const MiddleBlock = ({ title, content, button, id, t }: MiddleBlockProps) => {
+const MiddleBlock = ({ title, content, button, id, section, t }: MiddleBlockProps) => {
   return (
     <MiddleBlockSection>
       <Slide direction="up">
@@ -19,6 +21,20 @@ const MiddleBlock = ({ title, content, button, id, t }: MiddleBlockProps) => {
                   {t(button.title)}
                 </Button>
               )}
+              <ServiceWrapper>
+                <Row justify="space-between">
+                  {typeof section === 'object' &&
+                    section.map((item: SectionBlockProps, id: number) => {
+                      return (
+                        <Col key={id}>
+                          <Image style={{ borderRadius: '50%' }} src={item.image} width="60px" height="60px" />
+                          <MinTitle>{t(item.title)}</MinTitle>
+                          <MinPara>{t(item.content)}</MinPara>
+                        </Col>
+                      );
+                    })}
+                </Row>
+              </ServiceWrapper>
             </Col>
           </ContentWrapper>
         </Row>

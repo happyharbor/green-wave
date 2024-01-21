@@ -14,7 +14,7 @@ const ColumnBlock = ({ t, title, columnBlocks, id }: ColumnBlockProps) => {
             <Row justify="center" align="top">
               {columnBlocks.map(({ Icon, title, content }: ColumnBlockPageProps, id: number) => {
                 return (
-                  <Col key={id} lg={6} md={6} sm={6} xs={6}>
+                  <Col key={id}>
                     <Icon size={64} />
                     <ContentWrapper>
                       <Title>{t(title)}</Title>

@@ -121,6 +121,7 @@ const Footer = ({ t }: any) => {
               <SocialLink href="https://www.instagram.com/" src="instagram.svg" />
               <SocialLink href="https://twitter.com/" src="twitter.svg" />
               <SocialLink href="https://www.linkedin.com/" src="linkedin.svg" />
+              <SocialLink href="https://www.tiktok.com/" src="tiktok.svg" />
             </FooterContainer>
           </Row>
         </Container>

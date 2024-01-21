@@ -39,26 +39,25 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo('whatWeDo')}>
-          <Span>{t('What we do')}</Span>
-        </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo('whyGreenWave')}>
-          <Span>{t('Why Us')}</Span>
+          <Span>{t('Why us')}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo('services')}>
           <Span>{t('Services')}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo('whoAreWe')}>
+          <Span>{t('Who Are We')}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo('contact')}>
           <Span>{t('Contact')}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall style={{ width: '180px' }} onClick={() => scrollTo('bookme')}>
           <Span>
-            <Button>{t('Book me')}</Button>
+            <Button>{t('Book Me')}</Button>
           </Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall>
           <Span>
-            {/*<Label htmlFor="select-lang">{t('Language')}</Label>*/}
             <LanguageSwitchContainer>
               <LanguageSwitch onClick={() => i18n.changeLanguage('en')}>
                 <SvgIcon src="united-kingdom.svg" aria-label="homepage" width="48px" height="48px" />

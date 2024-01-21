@@ -2,11 +2,11 @@ export interface ContentBlockPageProps {
   title: string;
   content?: string;
   buttons?: ContentBlockButtonProps[];
+  section?: { title: string; content: string }[];
 }
 
 export interface ContentBlockProps extends ContentBlockPageProps {
   icon: string;
-  section?: any;
   t?: any;
   id: string;
   type?: string;

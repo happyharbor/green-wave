@@ -1,4 +1,4 @@
-import { Leaf, Building2, Presentation, Cpu } from 'lucide-react';
+import { Building2, Cpu, Leaf, Presentation as PresentationIcon } from 'lucide-react';
 import { ColumnBlockPageProps } from '../components/ColumnBlock/types';
 
 export const whyUs: ColumnBlockPageProps[] = [
@@ -18,7 +18,7 @@ export const whyUs: ColumnBlockPageProps[] = [
     content: 'DemonstratedSuccessContent',
   },
   {
-    Icon: Presentation,
+    Icon: PresentationIcon,
     title: 'Offering a holistic sustainability strategy',
     content: 'OfferingAHolisticContent',
   },

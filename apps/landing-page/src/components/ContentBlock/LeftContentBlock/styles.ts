@@ -23,20 +23,20 @@ export const ContentWrapper = styled('div')`
 `;
 
 export const ServiceWrapper = styled('div')`
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
+  max-width: 70%;
+  margin-left: 15%;
 `;
 
 export const MinTitle = styled('h6')`
+  margin: 0.3rem 0 0 0;
   font-size: 15px;
   line-height: 1rem;
-  padding: 0.5rem 0;
-  text-transform: uppercase;
+  //padding: 0.5rem 0;
   color: #000;
   font-family: 'Motiva Sans Light', sans-serif;
 `;
 
 export const MinPara = styled('p')`
   font-size: 13px;
+  margin: 0.2rem 0 2rem 0;
 `;
