@@ -5,6 +5,7 @@ import { withTranslation } from 'react-i18next';
 import { Button } from '../../common/Button';
 import Container from '../../common/Container';
 import { SvgIcon } from '../../common/SvgIcon';
+import { gScrollTo } from '../../common/utils/scroll';
 import { LanguageSwitch, LanguageSwitchContainer } from '../Footer/styles';
 import {
   HeaderSection,
@@ -31,10 +32,7 @@ const Header = ({ t }: any) => {
 
   const MenuItem = () => {
     const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: 'smooth',
-      });
+      gScrollTo(id);
       setVisibility(false);
     };
     return (

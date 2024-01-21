@@ -8,7 +8,7 @@ const ColumnBlock = ({ t, title, columnBlocks, id }: ColumnBlockProps) => {
   return (
     <div>
       <ColumnBlockSection>
-        <Slide direction="up">
+        <Slide direction="left">
           <Row justify="center">
             <h6>{t(title)}</h6>
             <Row justify="center" align="top" id={id}>
