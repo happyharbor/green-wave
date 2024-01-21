@@ -4,4 +4,4 @@ applications:
       - pattern: '/img/*'
         headers:
           - key: 'Cache-Control'
-            value: 'public, max-age=31536000 s-maxage=86400, immutable'
+            value: 'public, s-maxage=86400, immutable'
