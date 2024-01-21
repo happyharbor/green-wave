@@ -1,9 +1,11 @@
 import { Row, Col, Drawer } from 'antd';
+import i18n from 'i18next';
 import { useState } from 'react';
 import { withTranslation } from 'react-i18next';
 import { Button } from '../../common/Button';
 import Container from '../../common/Container';
 import { SvgIcon } from '../../common/SvgIcon';
+import { LanguageSwitch, LanguageSwitchContainer } from '../Footer/styles';
 import {
   HeaderSection,
   LogoContainer,
@@ -52,6 +54,19 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall style={{ width: '180px' }} onClick={() => scrollTo('bookme')}>
           <Span>
             <Button>{t('Book me')}</Button>
+          </Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall>
+          <Span>
+            {/*<Label htmlFor="select-lang">{t('Language')}</Label>*/}
+            <LanguageSwitchContainer>
+              <LanguageSwitch onClick={() => i18n.changeLanguage('en')}>
+                <SvgIcon src="united-kingdom.svg" aria-label="homepage" width="48px" height="48px" />
+              </LanguageSwitch>
+              <LanguageSwitch onClick={() => i18n.changeLanguage('gr')}>
+                <SvgIcon src="greece.svg" aria-label="homepage" width="48px" height="48px" />
+              </LanguageSwitch>
+            </LanguageSwitchContainer>
           </Span>
         </CustomNavLinkSmall>
       </>

@@ -167,4 +167,6 @@ export const LanguageSwitchContainer = styled('div')`
   display: flex;
   justify-content: space-between;
   width: 85px;
+  position: relative;
+  top: 0.8em;
 `;
