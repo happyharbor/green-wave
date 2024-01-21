@@ -17,6 +17,7 @@ const CalApp = ({ id }: { id: string }) => {
       cal('ui', {
         styles: { branding: { brandColor: '#18216d' } },
         hideEventTypeDetails: false,
+        theme: 'light',
         layout: 'month_view',
       });
     })();

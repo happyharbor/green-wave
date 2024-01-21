@@ -9,9 +9,9 @@ const ColumnBlock = ({ t, title, columnBlocks, id }: ColumnBlockProps) => {
     <div>
       <ColumnBlockSection>
         <Slide direction="up">
-          <Row justify="center" id={id}>
+          <Row justify="center">
             <h6>{t(title)}</h6>
-            <Row justify="center" align="top">
+            <Row justify="center" align="top" id={id}>
               {columnBlocks.map(({ Icon, title, content }: ColumnBlockPageProps, id: number) => {
                 return (
                   <Col key={id}>

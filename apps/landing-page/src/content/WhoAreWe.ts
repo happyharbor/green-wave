@@ -17,12 +17,12 @@ export const whoAreWe: MiddleBlockPageProps = {
     {
       title: 'Vasia',
       content: 'UX/UI Designer',
-      image: '/img/images/vasia.jpeg',
+      image: '/img/images/vasia.jpg',
     },
     {
       title: 'Giorgos',
       content: 'Developer | IT Consultant',
-      image: '/img/images/giorgos.jpeg',
+      image: '/img/images/giorgos.jpg',
     },
   ],
 };

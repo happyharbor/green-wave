@@ -6,7 +6,7 @@ import { introContent } from '../../content/IntroContent';
 import { services } from '../../content/Services';
 import { whatWeDoContent } from '../../content/WhatWeDoContent';
 import { whoAreWe } from '../../content/WhoAreWe';
-import { whyUs } from '../../content/whyUs';
+import { whyUs } from '../../content/WhyUs';
 
 const Contact = lazy(() => import('../../components/ContactForm'));
 const MiddleBlock = lazy(() => import('../../components/MiddleBlock'));
