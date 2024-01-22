@@ -1,7 +1,0 @@
-applications:
-  - appRoot: apps/landing-page
-    customHeaders:
-      - pattern: '/img/*'
-        headers:
-          - key: 'Cache-Control'
-            value: 'public, s-maxage=86400, immutable'
