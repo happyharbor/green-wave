@@ -2,7 +2,7 @@ import { Col, Drawer, Row } from 'antd';
 import i18n from 'i18next';
 import { useState } from 'react';
 import { withTranslation } from 'react-i18next';
-import Container from '../../common/Container';
+import { PageContainer } from '../../common/Container/styles';
 import { SvgIcon } from '../../common/SvgIcon';
 import { gScrollTo } from '../../common/utils/scroll';
 import {
@@ -67,7 +67,7 @@ const Header = ({ t }: any) => {
 
   return (
     <HeaderSection>
-      <Container>
+      <PageContainer>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.svg" width="85px" height="85px" />
@@ -92,7 +92,7 @@ const Header = ({ t }: any) => {
           </Col>
           <MenuItem />
         </Drawer>
-      </Container>
+      </PageContainer>
     </HeaderSection>
   );
 };

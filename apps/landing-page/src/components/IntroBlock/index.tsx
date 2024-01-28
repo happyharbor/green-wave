@@ -1,9 +1,10 @@
 import { withTranslation } from 'react-i18next';
 import { Button } from '../../common/Button';
+import { ButtonSection } from '../../common/Button/styles';
 import { TranslationProps } from '../../common/types';
 import { gScrollTo } from '../../common/utils/scroll';
 import { secondaryColor } from '../../styles/styles';
-import { ButtonSection, ContentWrapper, IntroBlockSection } from './styles';
+import { ContentWrapper, IntroBlockSection } from './styles';
 
 const IntroColumnBlock = ({ t }: TranslationProps) => {
   return (

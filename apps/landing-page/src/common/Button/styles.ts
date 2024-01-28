@@ -27,3 +27,9 @@ export const StyledButton = styled('button')<{ $color?: string; $fixedWidth?: bo
     background-color: rgb(255, 130, 92);
   }
 `;
+
+export const ButtonSection = styled('section')`
+  display: flex;
+  align-items: flex-start;
+  gap: 2.25rem;
+`;

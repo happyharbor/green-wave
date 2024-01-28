@@ -37,3 +37,7 @@ export interface validateProps {
 export interface TranslationProps {
   t: WithTranslation['t'];
 }
+
+export interface PageBlockProps extends TranslationProps {
+  id: string;
+}

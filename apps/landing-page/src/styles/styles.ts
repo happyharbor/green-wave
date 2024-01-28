@@ -54,7 +54,7 @@ export const Styles = createGlobalStyle`
     h5,
     h6 {
         color: ${fontColor};
-        font-size: 56px;
+        font-style: normal;
         line-height: 1.18;
 
         @media only screen and (max-width: 890px) {
@@ -68,15 +68,23 @@ export const Styles = createGlobalStyle`
     
     h1 {
         font-size: 5rem;
-        font-style: normal;
         font-weight: 900;
         line-height: 6rem; /* 120% */
     }
+    
+    h2{
+        font-size: 3.75rem;
+        font-weight: 700;
+        line-height: 4.5rem; /* 120% */
+    }
 
     p {
-        color: #18216d;
-        font-size: 21px;        
-        line-height: 1.41;
+        color: ${fontColor};
+        font-size: 1.375rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2.0625rem; /* 150% */
+        margin: 0;
     }
 
     a {

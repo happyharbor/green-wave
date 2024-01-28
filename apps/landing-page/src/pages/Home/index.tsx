@@ -3,7 +3,6 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 import CallApp from '../../components/CalApp';
 import { contactContent } from '../../content/ContactContent';
 import { services } from '../../content/Services';
-import { whatWeDoContent } from '../../content/WhatWeDoContent';
 import { whoAreWe } from '../../content/WhoAreWe';
 import { whyUs } from '../../content/WhyUs';
 
@@ -14,18 +13,14 @@ const ScrollToTop = lazy(() => import('../../common/ScrollToTop'));
 const ContentBlock = lazy(() => import('../../components/ContentBlock'));
 const ColumnBlock = lazy(() => import('../../components/ColumnBlock'));
 const IntroBlock = lazy(() => import('../../components/IntroBlock'));
+const WhatWeDoBlock = lazy(() => import('../../components/WhatWeDoBlock'));
 
 const Home = ({ t }: WithTranslation) => {
   return (
     <Container>
       <ScrollToTop />
       <IntroBlock />
-      <MiddleBlock
-        title={whatWeDoContent.title}
-        content={whatWeDoContent.content}
-        button={whatWeDoContent.button}
-        id="whatWeDo"
-      />
+      <WhatWeDoBlock id={'whatWeDo'} />
       <ColumnBlock columnBlocks={whyUs} title={'Why us'} id="whyGreenWave" />
       <ContentBlock
         type="left"

@@ -1,8 +1,10 @@
 import { ContainerProps } from '../types';
-import { StyledContainer } from './styles';
+import { PageContainer, StyledContainer } from './styles';
 
 const Container = ({ border, children }: ContainerProps) => (
-  <StyledContainer $border={border}>{children}</StyledContainer>
+  <PageContainer>
+    <StyledContainer $border={border}>{children}</StyledContainer>
+  </PageContainer>
 );
 
 export default Container;
