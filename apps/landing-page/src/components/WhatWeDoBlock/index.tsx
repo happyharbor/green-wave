@@ -2,7 +2,7 @@ import { withTranslation } from 'react-i18next';
 import { PageBlockProps } from '../../common/types';
 import { Content, ContentWrapper, WhatWeDoBlockSection } from './styles';
 
-const IntroColumnBlock = ({ t }: PageBlockProps) => {
+const WhatWeDoBlock = ({ t }: PageBlockProps) => {
   return (
     <WhatWeDoBlockSection>
       <ContentWrapper>
@@ -13,4 +13,4 @@ const IntroColumnBlock = ({ t }: PageBlockProps) => {
   );
 };
 
-export default withTranslation()(IntroColumnBlock);
+export default withTranslation()(WhatWeDoBlock);

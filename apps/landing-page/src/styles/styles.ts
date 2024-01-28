@@ -77,6 +77,13 @@ export const Styles = createGlobalStyle`
         font-weight: 700;
         line-height: 4.5rem; /* 120% */
     }
+    
+    h3{
+        font-size: 1.75rem;
+        font-weight: 900;
+        line-height: 2.1rem; /* 120% */
+        margin: 0;
+    }
 
     p {
         color: ${fontColor};

@@ -14,6 +14,7 @@ const ContentBlock = lazy(() => import('../../components/ContentBlock'));
 const ColumnBlock = lazy(() => import('../../components/ColumnBlock'));
 const IntroBlock = lazy(() => import('../../components/IntroBlock'));
 const WhatWeDoBlock = lazy(() => import('../../components/WhatWeDoBlock'));
+const TrustedByBlock = lazy(() => import('../../components/TrustedByBlock'));
 
 const Home = ({ t }: WithTranslation) => {
   return (
@@ -21,6 +22,7 @@ const Home = ({ t }: WithTranslation) => {
       <ScrollToTop />
       <IntroBlock />
       <WhatWeDoBlock id={'whatWeDo'} />
+      <TrustedByBlock />
       <ColumnBlock columnBlocks={whyUs} title={'Why us'} id="whyGreenWave" />
       <ContentBlock
         type="left"
