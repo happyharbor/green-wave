@@ -5,11 +5,6 @@ import { primaryColor } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
   padding: 1rem 0 0 0;
-
-  .ant-row-space-between {
-    align-items: center;
-    text-align: center;
-  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -111,7 +106,6 @@ export const LanguageSwitch = styled('div')<any>`
   &:hover,
   &:active,
   &:focus {
-    -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
   }

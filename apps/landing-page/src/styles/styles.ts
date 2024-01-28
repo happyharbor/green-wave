@@ -40,7 +40,7 @@ export const Styles = createGlobalStyle`
 
         :focus-within {
             background: none;
-            box-shadow: #2e186a 0px 0px 0px 1px;
+            box-shadow: #2e186a 0 0 0 1px;
         }
     }
 
@@ -89,16 +89,5 @@ export const Styles = createGlobalStyle`
 
     .about-block-image svg {
         text-align: center;
-    }
-
-    .ant-drawer-body {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        padding-top: 1.5rem;
-    }
-
-    .ant-drawer-content-wrapper {
-        width: 300px !important;
     }
 `;

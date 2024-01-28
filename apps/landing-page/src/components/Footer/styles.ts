@@ -53,7 +53,6 @@ export const Large = styled(Link)<any>`
   font-size: 16px;
   color: #000;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
   text-transform: capitalize;
   line-height: 24px;
   display: block;
@@ -100,7 +99,6 @@ export const FooterContainer = styled('div')`
     &:hover,
     &:active,
     &:focus {
-      -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1);
     }
