@@ -1,20 +1,20 @@
-import { Row, Col, Drawer } from 'antd';
+import { Col, Drawer, Row } from 'antd';
 import i18n from 'i18next';
 import { useState } from 'react';
 import { withTranslation } from 'react-i18next';
-import { Button } from '../../common/Button';
 import Container from '../../common/Container';
 import { SvgIcon } from '../../common/SvgIcon';
 import { gScrollTo } from '../../common/utils/scroll';
-import { LanguageSwitch, LanguageSwitchContainer } from '../Footer/styles';
 import {
-  HeaderSection,
-  LogoContainer,
   Burger,
-  NotHidden,
-  Menu,
   CustomNavLinkSmall,
+  HeaderSection,
   Label,
+  LanguageSwitch,
+  LanguageSwitchContainer,
+  LogoContainer,
+  Menu,
+  NotHidden,
   Outline,
   Span,
 } from './styles';
@@ -49,11 +49,6 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall onClick={() => scrollTo('contact')}>
           <Span>{t('Contact')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall style={{ width: '180px' }} onClick={() => scrollTo('bookme')}>
-          <Span>
-            <Button>{t('Book Me')}</Button>
-          </Span>
-        </CustomNavLinkSmall>
         <CustomNavLinkSmall>
           <Span>
             <LanguageSwitchContainer>
@@ -75,7 +70,7 @@ const Header = ({ t }: any) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <SvgIcon src="logo.svg" width="85px" height="85px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

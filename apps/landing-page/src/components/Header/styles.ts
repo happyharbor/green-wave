@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { MenuOutlined } from '@ant-design/icons';
+import { primaryColor } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
-  padding: 1rem 0.5rem;
+  padding: 1rem 0 0 0;
 
   .ant-row-space-between {
     align-items: center;
@@ -67,10 +68,12 @@ export const Menu = styled('h5')`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
-  font-size: 1.2rem;
-  color: #18216d;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: ${primaryColor};
+  font-family: 'Roboto', sans-serif;
   transition: color 0.2s ease-in;
-  margin: 0.5rem 2rem;
+  margin: 0 0 0 2.5rem;
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
@@ -97,8 +100,26 @@ export const Span = styled('span')`
   &:hover,
   &:active,
   &:focus {
-    color: rgb(255, 130, 92);
-    text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    color: #286f70;
   }
+`;
+
+export const LanguageSwitch = styled('div')<any>`
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+`;
+
+export const LanguageSwitchContainer = styled('div')`
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 1.1rem;
 `;

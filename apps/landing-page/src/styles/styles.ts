@@ -1,26 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
 
+export const primaryColor = '#292929';
+export const secondaryColor = '#286F70';
+
 export const Styles = createGlobalStyle`
 
     @font-face {
-        font-family: "Motiva Sans Light";
-        src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
+        font-family: "Roboto";
+        src: url("/fonts/Roboto-Medium.ttf") format("truetype");
         font-style: normal;
     }
 
-    @font-face {
-        font-family: "Motiva Sans Bold";
-        src: url("/fonts/Motiva-Sans-Bold.ttf") format("truetype");
-        font-style: normal;
-    }
-
-
-    body,
-    html,
     a {
-        font-family: 'Motiva Sans Light', sans-serif;
     }
-
 
     body {
         margin:0;
@@ -29,6 +21,7 @@ export const Styles = createGlobalStyle`
         outline: 0;
         background: #fff;
         overflow-x: hidden;
+        font-family: "Roboto", sans-serif;
     }
 
     a:hover {
@@ -57,8 +50,7 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Motiva Sans Bold', serif;
-        color: #18216d;
+        color: ${{ primaryColor }};
         font-size: 56px;
         line-height: 1.18;
 

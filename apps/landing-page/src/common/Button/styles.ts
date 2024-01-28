@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { primaryColor } from '../../styles/styles';
 
 export const StyledButton = styled('button')<{ $color?: string; $fixedWidth?: boolean }>`
-  background: ${(p) => p.color || '#2e186a'};
-  color: ${(p) => (p.color ? '#2E186A' : '#fff')};
+  background: ${(p) => p.color || '#4AFFDC'};
+  color: ${(p) => p.color ?? primaryColor};
   font-size: 1rem;
   font-weight: 700;
   width: 100%;

@@ -1,5 +1,5 @@
-import { Row, Col } from 'antd';
-import { Slide, Zoom } from 'react-awesome-reveal';
+import { Col, Row } from 'antd';
+import { Zoom } from 'react-awesome-reveal';
 import { withTranslation } from 'react-i18next';
 import { Button } from '../../common/Button';
 import Input from '../../common/Input';
@@ -7,7 +7,7 @@ import TextArea from '../../common/TextArea';
 import { useForm } from '../../common/utils/useForm';
 import validate from '../../common/utils/validationRules';
 import Block from '../Block';
-import { ContactContainer, FormGroup, Span, ButtonContainer } from './styles';
+import { ButtonContainer, ContactContainer, FormGroup, Span } from './styles';
 import { ContactProps, ValidationTypeProps } from './types';
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
@@ -26,47 +26,43 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
     <ContactContainer id={id}>
       <Row justify="space-between" align="middle">
         <Col lg={12} md={11} sm={24} xs={24}>
-          <Slide direction="left">
-            <Block title={title} content={content} />
-          </Slide>
+          <Block title={title} content={content} />
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
-          <Slide direction="right">
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="Name"
-                  placeholder="Your Name"
-                  value={values.name || ''}
-                  onChange={handleChange}
-                />
-                <ValidationType type="name" />
-              </Col>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="Email"
-                  placeholder="Your Email"
-                  value={values.email || ''}
-                  onChange={handleChange}
-                />
-                <ValidationType type="email" />
-              </Col>
-              <Col span={24}>
-                <TextArea
-                  placeholder="Your Message"
-                  value={values.message || ''}
-                  name="Message"
-                  onChange={handleChange}
-                />
-                <ValidationType type="message" />
-              </Col>
-              <ButtonContainer>
-                <Button name="submit">{t('Submit')}</Button>
-              </ButtonContainer>
-            </FormGroup>
-          </Slide>
+          <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+            <Col span={24}>
+              <Input
+                type="text"
+                name="Name"
+                placeholder="Your Name"
+                value={values.name || ''}
+                onChange={handleChange}
+              />
+              <ValidationType type="name" />
+            </Col>
+            <Col span={24}>
+              <Input
+                type="text"
+                name="Email"
+                placeholder="Your Email"
+                value={values.email || ''}
+                onChange={handleChange}
+              />
+              <ValidationType type="email" />
+            </Col>
+            <Col span={24}>
+              <TextArea
+                placeholder="Your Message"
+                value={values.message || ''}
+                name="Message"
+                onChange={handleChange}
+              />
+              <ValidationType type="message" />
+            </Col>
+            <ButtonContainer>
+              <Button name="submit">{t('Submit')}</Button>
+            </ButtonContainer>
+          </FormGroup>
         </Col>
       </Row>
     </ContactContainer>
