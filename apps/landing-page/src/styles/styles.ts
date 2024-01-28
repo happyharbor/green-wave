@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const primaryColor = '#292929';
-export const secondaryColor = '#286F70';
+export const fontColor = '#292929';
+export const primaryColor = '#4AFFDC';
+export const secondaryColor = '#EAC638';
+
+export const fontFamily = "'Roboto', sans-serif";
 
 export const Styles = createGlobalStyle`
 
@@ -21,7 +24,7 @@ export const Styles = createGlobalStyle`
         outline: 0;
         background: #fff;
         overflow-x: hidden;
-        font-family: "Roboto", sans-serif;
+        font-family: ${fontFamily};
     }
 
     a:hover {
@@ -50,7 +53,7 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        color: ${{ primaryColor }};
+        color: ${fontColor};
         font-size: 56px;
         line-height: 1.18;
 
@@ -62,15 +65,18 @@ export const Styles = createGlobalStyle`
           font-size: 32px;
         }
     }
+    
+    h1 {
+        font-size: 5rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 6rem; /* 120% */
+    }
 
     p {
         color: #18216d;
         font-size: 21px;        
         line-height: 1.41;
-    }
-
-    h1 {
-        font-weight: 600;
     }
 
     a {

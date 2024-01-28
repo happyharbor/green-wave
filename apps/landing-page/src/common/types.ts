@@ -1,3 +1,5 @@
+import { WithTranslation } from 'react-i18next';
+
 export interface ContainerProps {
   border?: boolean;
   children: React.ReactNode;
@@ -30,4 +32,8 @@ export interface validateProps {
   name: string;
   message: string;
   email: string;
+}
+
+export interface TranslationProps {
+  t: WithTranslation['t'];
 }

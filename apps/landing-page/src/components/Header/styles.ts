@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { MenuOutlined } from '@ant-design/icons';
-import { primaryColor } from '../../styles/styles';
+import { fontColor, fontFamily } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
   padding: 1rem 0 0 0;
@@ -65,8 +65,8 @@ export const Menu = styled('h5')`
 export const CustomNavLinkSmall = styled(NavLink)`
   font-size: 1.125rem;
   font-weight: 800;
-  color: ${primaryColor};
-  font-family: 'Roboto', sans-serif;
+  color: ${fontColor};
+  font-family: ${fontFamily};
   transition: color 0.2s ease-in;
   margin: 0 0 0 2.5rem;
 

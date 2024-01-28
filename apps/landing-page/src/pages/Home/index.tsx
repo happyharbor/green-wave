@@ -2,7 +2,6 @@ import { lazy } from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
 import CallApp from '../../components/CalApp';
 import { contactContent } from '../../content/ContactContent';
-import { introContent } from '../../content/IntroContent';
 import { services } from '../../content/Services';
 import { whatWeDoContent } from '../../content/WhatWeDoContent';
 import { whoAreWe } from '../../content/WhoAreWe';
@@ -14,18 +13,13 @@ const Container = lazy(() => import('../../common/Container'));
 const ScrollToTop = lazy(() => import('../../common/ScrollToTop'));
 const ContentBlock = lazy(() => import('../../components/ContentBlock'));
 const ColumnBlock = lazy(() => import('../../components/ColumnBlock'));
+const IntroBlock = lazy(() => import('../../components/IntroBlock'));
 
 const Home = ({ t }: WithTranslation) => {
   return (
     <Container>
       <ScrollToTop />
-      <ContentBlock
-        type="right"
-        title={introContent.title}
-        buttons={introContent.buttons}
-        icon="developer.svg"
-        id="intro"
-      />
+      <IntroBlock />
       <MiddleBlock
         title={whatWeDoContent.title}
         content={whatWeDoContent.content}
