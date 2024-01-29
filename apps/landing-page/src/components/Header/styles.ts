@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { MenuOutlined } from '@ant-design/icons';
-import { fontColor, fontFamily } from '../../styles/styles';
+import { fontColor, fontFamily, thirdColor } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
   padding: 1rem 0 0 0;
@@ -95,7 +95,7 @@ export const Span = styled('span')`
   &:hover,
   &:active,
   &:focus {
-    color: #286f70;
+    color: ${thirdColor};
   }
 `;
 

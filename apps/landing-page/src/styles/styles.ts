@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const fontColor = '#292929';
 export const primaryColor = '#4AFFDC';
 export const secondaryColor = '#EAC638';
+export const thirdColor = '#286F70';
 
 export const fontFamily = "'Roboto', sans-serif";
 
@@ -76,6 +77,7 @@ export const Styles = createGlobalStyle`
         font-size: 3.75rem;
         font-weight: 700;
         line-height: 4.5rem; /* 120% */
+        margin: 0 0 1rem 0;
     }
     
     h3{
