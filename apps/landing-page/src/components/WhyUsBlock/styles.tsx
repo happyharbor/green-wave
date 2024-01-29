@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const BlockSection = styled('section')`
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0 0 0 2rem;

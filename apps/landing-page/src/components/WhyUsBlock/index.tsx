@@ -6,7 +6,7 @@ import { ContentContainerStyle, ContentWrapper, BlockSection, Content } from './
 const WhyUsBlock = ({ t }: PageBlockProps) => {
   return (
     <BlockSection>
-      <h2>{t('Why us')}</h2>
+      <h2 style={{ textAlign: 'center' }}>{t('Why us')}</h2>
       <ContentWrapper>
         <ContentContainer
           t={t}

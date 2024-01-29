@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { primaryColor, thirdColor } from '../../styles/styles';
+import { thirdColor } from '../../styles/styles';
 
 export const BlockSection = styled('section')`
   display: flex;
