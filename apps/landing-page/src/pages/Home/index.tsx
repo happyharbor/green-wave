@@ -4,17 +4,16 @@ import CallApp from '../../components/CalApp';
 import { contactContent } from '../../content/ContactContent';
 import { services } from '../../content/Services';
 import { whoAreWe } from '../../content/WhoAreWe';
-import { whyUs } from '../../content/WhyUs';
 
 const Contact = lazy(() => import('../../components/ContactForm'));
 const MiddleBlock = lazy(() => import('../../components/MiddleBlock'));
 const Container = lazy(() => import('../../common/Container'));
 const ScrollToTop = lazy(() => import('../../common/ScrollToTop'));
 const ContentBlock = lazy(() => import('../../components/ContentBlock'));
-const ColumnBlock = lazy(() => import('../../components/ColumnBlock'));
 const IntroBlock = lazy(() => import('../../components/IntroBlock'));
 const WhatWeDoBlock = lazy(() => import('../../components/WhatWeDoBlock'));
 const TrustedByBlock = lazy(() => import('../../components/TrustedByBlock'));
+const WhyUsBlock = lazy(() => import('../../components/WhyUsBlock'));
 
 const Home = ({ t }: WithTranslation) => {
   return (
@@ -23,7 +22,7 @@ const Home = ({ t }: WithTranslation) => {
       <IntroBlock />
       <WhatWeDoBlock id={'whatWeDo'} />
       <TrustedByBlock />
-      <ColumnBlock columnBlocks={whyUs} title={'Why us'} id="whyGreenWave" />
+      <WhyUsBlock id="whyGreenWave" />
       <ContentBlock
         type="left"
         title={services.title}

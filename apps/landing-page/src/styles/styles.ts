@@ -85,6 +85,13 @@ export const Styles = createGlobalStyle`
         margin: 0;
     }
 
+    h4{
+        font-size: 1.5rem;
+        font-weight: 900;
+        line-height: 1.95rem; /* 130% */
+        margin: 0;
+    }
+
     p {
         color: ${fontColor};
         font-size: 1.375rem;
