@@ -11,6 +11,7 @@ const TrustedByBlock = lazy(() => import('../../components/TrustedByBlock'));
 const WhyUsBlock = lazy(() => import('../../components/WhyUsBlock'));
 const ServicesBlock = lazy(() => import('../../components/ServicesBlock'));
 const WhoAreWeBlock = lazy(() => import('../../components/WhoAreWeBlock'));
+const MailingListForm = lazy(() => import('../../components/MailingListForm'));
 
 const Home = ({ t }: WithTranslation) => {
   return (
@@ -24,6 +25,7 @@ const Home = ({ t }: WithTranslation) => {
       <WhoAreWeBlock id="whoAreWe" />
       <Contact id="contact" />
       <CallApp id="bookme" />
+      <MailingListForm />
     </Container>
   );
 };

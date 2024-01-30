@@ -8,10 +8,11 @@
 import { useEffect } from 'react';
 import { withTranslation } from 'react-i18next';
 import Cal, { getCalApi } from '@calcom/embed-react';
+import { PageBlockProps } from '../../common/types';
 import { primaryColor } from '../../styles/styles';
 import { CalAppContainer } from './styles';
 
-const CalApp = ({ id }: { id: string }) => {
+const CalApp = ({ id, t }: PageBlockProps) => {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi();
@@ -25,6 +26,7 @@ const CalApp = ({ id }: { id: string }) => {
   }, []);
   return (
     <CalAppContainer id={id}>
+      <h2 style={{ textAlign: 'center', paddingBottom: '2rem' }}>{t('Book Me')}</h2>
       <Cal
         id={id}
         calLink="green-wave/30min"

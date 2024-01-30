@@ -12,7 +12,7 @@ import { ButtonContainer, ContactContainer, FormGroup, Span } from './styles';
 import { ValidationTypeProps } from './types';
 
 const Contact = ({ id, t }: PageBlockProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate) as any;
+  const { values, errors, handleChange, handleSubmit } = useForm(t, validate) as any;
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type];
@@ -30,7 +30,7 @@ const Contact = ({ id, t }: PageBlockProps) => {
           <Block title={'Contact form'} content={t('ContactFormContent')} />
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
-          <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+          <FormGroup autoComplete="on" onSubmit={handleSubmit}>
             <Col span={24}>
               <Input
                 type="text"

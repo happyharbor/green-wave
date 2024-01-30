@@ -3,9 +3,9 @@ import { withTranslation } from 'react-i18next';
 import { PageBlockProps, TranslationProps } from '../../common/types';
 import { BlockSection, Content, ContentWrapper, Name, Title, UsSection, WhoAmIStyle } from './styles';
 
-const WhoAreWeBlock = ({ t }: PageBlockProps) => {
+const WhoAreWeBlock = ({ t, id }: PageBlockProps) => {
   return (
-    <BlockSection>
+    <BlockSection id={id}>
       <ContentWrapper>
         <h2>{t('Who Are We')}</h2>
         <Content>{t('WhoAreWeContent')}</Content>

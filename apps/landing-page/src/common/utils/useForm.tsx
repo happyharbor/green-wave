@@ -1,5 +1,6 @@
 import { notification } from 'antd';
 import { useState, useEffect } from 'react';
+import { WithTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 
 interface FormElements extends HTMLFormControlsCollection {
@@ -11,22 +12,21 @@ interface ContactFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
-export const useForm = (validate: any) => {
+export const useForm = (t: WithTranslation['t'], validate: any) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [shouldSubmit, setShouldSubmit] = useState(false);
 
   const openNotificationWithIcon = () => {
     notification['success']({
-      message: 'Success',
-      description: 'Your message has been sent!',
+      message: t('Success'),
+      description: t('Your message has been sent!'),
     });
   };
 
   const handleSubmit = (event: React.FormEvent<ContactFormElement>) => {
     event.preventDefault();
     setErrors(validate(values));
-    // Your url for API
 
     const templateParams = {
       name: event.currentTarget.elements.name.value,

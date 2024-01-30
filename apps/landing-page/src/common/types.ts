@@ -35,6 +35,18 @@ export interface validateProps {
   email: string;
 }
 
+export interface MailingListValidateProps {
+  name: string;
+  consent: boolean;
+  email: string;
+}
+
+export interface MailingListValidateErrors {
+  name?: string;
+  consent?: string;
+  email?: string;
+}
+
 export interface TranslationProps {
   t: WithTranslation['t'];
 }

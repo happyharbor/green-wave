@@ -3,9 +3,9 @@ import { withTranslation } from 'react-i18next';
 import { PageBlockProps, TranslationProps } from '../../common/types';
 import { ContentContainerStyle, ContentWrapper, BlockSection, Content } from './styles';
 
-const WhyUsBlock = ({ t }: PageBlockProps) => {
+const WhyUsBlock = ({ t, id }: PageBlockProps) => {
   return (
-    <BlockSection>
+    <BlockSection id={id}>
       <h2 style={{ textAlign: 'center' }}>{t('Why us')}</h2>
       <ContentWrapper>
         <ContentContainer

@@ -2,9 +2,9 @@ import { withTranslation } from 'react-i18next';
 import { PageBlockProps } from '../../common/types';
 import { Content, ContentWrapper, BlockSection } from './styles';
 
-const ServicesBlock = ({ t }: PageBlockProps) => {
+const ServicesBlock = ({ t, id }: PageBlockProps) => {
   return (
-    <BlockSection>
+    <BlockSection id={id}>
       <ContentWrapper>
         <h2>{t('Services')}</h2>
         <Content>{t('ServicesContent')}</Content>
