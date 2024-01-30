@@ -1,8 +1,7 @@
-import { Row } from 'antd';
 import { withTranslation } from 'react-i18next';
 import Container from '../../common/Container';
 import { SvgIcon } from '../../common/SvgIcon';
-import { Extra, FooterContainer, LogoContainer, NavLink } from './styles';
+import { Extra, FooterContainer, LogoContainer, NavLink, SocialContainer } from './styles';
 
 interface SocialLinkProps {
   href: string;
@@ -22,19 +21,19 @@ const Footer = ({ t }: any) => {
     <>
       <Extra>
         <Container border={true}>
-          <Row justify="space-between" align="middle" style={{ paddingTop: '3rem' }}>
+          <FooterContainer>
             <NavLink to="/">
               <LogoContainer>
                 <SvgIcon src="logo.svg" aria-label="homepage" width="101px" height="64px" />
               </LogoContainer>
             </NavLink>
-            <FooterContainer>
+            <SocialContainer>
               <SocialLink href="https://www.instagram.com/" src="instagram.svg" />
               <SocialLink href="https://twitter.com/" src="twitter.svg" />
               <SocialLink href="https://www.linkedin.com/" src="linkedin.svg" />
               <SocialLink href="https://www.tiktok.com/" src="tiktok.svg" />
-            </FooterContainer>
-          </Row>
+            </SocialContainer>
+          </FooterContainer>
         </Container>
       </Extra>
     </>
