@@ -4,7 +4,7 @@ import { MenuOutlined } from '@ant-design/icons';
 import { fontColor, fontFamily, thirdColor } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
-  padding: 1rem 0 0 0;
+  padding: 0.5rem 0 0 0;
 `;
 
 export const LogoContainer = styled(Link)`
@@ -16,31 +16,10 @@ export const NavLink = styled('div')`
   text-align: center;
 `;
 
-export const CustomNavLink = styled('div')`
-  width: 203px;
-  display: inline-block;
-
-  @media only screen and (max-width: 411px) {
-    width: 150px;
-  }
-
-  @media only screen and (max-width: 320px) {
-    width: 118px;
-  }
-`;
-
-export const ContactWrapper = styled('div')<any>`
-  cursor: pointer;
-  width: ${(p) => (p.width ? '100%' : '110px')};
-  font-weight: 700;
-  text-align: center;
-  border-radius: 1.25rem;
-  display: inline-block;
-`;
-
 export const Burger = styled('div')`
   @media only screen and (max-width: 890px) {
-    display: block;
+    display: flex;
+    padding-right: 1.5rem;
   }
 
   display: none;
@@ -56,7 +35,7 @@ export const NotHidden = styled('div')`
   }
 `;
 
-export const Menu = styled('h5')`
+export const Menu = styled('p')`
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
@@ -71,13 +50,16 @@ export const CustomNavLinkSmall = styled(NavLink)`
   margin: 0 0 0 2.5rem;
 
   @media only screen and (max-width: 768px) {
+    padding-left: 9rem;
     margin: 1.25rem 2rem;
   }
 `;
 
 export const Label = styled('span')`
+  padding-top: 0.9rem;
   font-weight: 500;
-  color: #404041;
+  color: ${fontColor};
+  font-family: ${fontFamily};
   text-align: right;
   display: flex;
   justify-content: space-between;

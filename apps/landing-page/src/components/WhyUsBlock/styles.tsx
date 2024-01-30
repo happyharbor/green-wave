@@ -26,6 +26,10 @@ export const ContentContainerStyle = styled('div')`
   gap: 1rem;
   width: 28.6875rem;
   align-items: center;
+
+  @media only screen and (max-width: 414px) {
+    width: 100%;
+  }
 `;
 
 export const Content = styled('p')`

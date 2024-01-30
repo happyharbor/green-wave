@@ -33,8 +33,8 @@ export const FormGroup = styled('form')`
   padding-top: 1rem;
 
   @media only screen and (max-width: 1045px) {
+    width: 50%;
     max-width: 100%;
-    margin-top: 2rem;
   }
 `;
 
@@ -74,6 +74,10 @@ export const MailingListButton = styled('button')`
     color: #fff;
     border: 1px solid rgb(255, 130, 92);
     background-color: rgb(255, 130, 92);
+  }
+
+  @media only screen and (max-width: 414px) {
+    font-size: 1rem;
   }
 `;
 

@@ -1,4 +1,4 @@
-import { Col, Drawer, Row } from 'antd';
+import { Drawer, Row } from 'antd';
 import i18n from 'i18next';
 import { useState } from 'react';
 import { withTranslation } from 'react-i18next';
@@ -80,16 +80,10 @@ const Header = ({ t }: any) => {
           </Burger>
         </Row>
         <Drawer closable={false} open={visible} onClose={onClose}>
-          <Col style={{ marginBottom: '2.5rem' }}>
-            <Label onClick={onClose}>
-              <Col span={12}>
-                <Menu>Menu</Menu>
-              </Col>
-              <Col span={12}>
-                <Outline />
-              </Col>
-            </Label>
-          </Col>
+          <Label onClick={onClose}>
+            <Menu>{t('Menu')}</Menu>
+            <Outline />
+          </Label>
           <MenuItem />
         </Drawer>
       </PageContainer>

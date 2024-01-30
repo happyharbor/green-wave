@@ -56,7 +56,6 @@ export const Styles = createGlobalStyle`
     h6 {
         color: ${fontColor};
         font-style: normal;
-        line-height: 1.18;
 
         @media only screen and (max-width: 890px) {
           font-size: 47px;
@@ -70,28 +69,40 @@ export const Styles = createGlobalStyle`
     h1 {
         font-size: 5rem;
         font-weight: 900;
-        line-height: 6rem; /* 120% */
+
+        @media only screen and (max-width: 414px) {
+            font-size: 4rem;
+        }
     }
     
     h2{
         font-size: 3.75rem;
         font-weight: 700;
-        line-height: 4.5rem; /* 120% */
         margin: 0 0 1rem 0;
+
+        @media only screen and (max-width: 414px) {
+            font-size: 3.5rem;
+        }
     }
     
     h3{
         font-size: 1.75rem;
         font-weight: 900;
-        line-height: 2.1rem; /* 120% */
         margin: 0;
+
+        @media only screen and (max-width: 414px) {
+            font-size: 1.6rem;
+        }
     }
 
     h4{
         font-size: 1.5rem;
         font-weight: 900;
-        line-height: 1.95rem; /* 130% */
         margin: 0;
+
+        @media only screen and (max-width: 414px) {
+            font-size: 1.4rem;
+        }
     }
 
     p {
@@ -99,8 +110,11 @@ export const Styles = createGlobalStyle`
         font-size: 1.375rem;
         font-style: normal;
         font-weight: 500;
-        line-height: 2.0625rem; /* 150% */
         margin: 0;
+
+        @media only screen and (max-width: 414px) {
+            font-size: 1.3rem;
+        }
     }
 
     a {

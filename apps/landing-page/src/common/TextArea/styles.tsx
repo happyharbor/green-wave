@@ -6,6 +6,10 @@ export const StyledContainer = styled('div')`
   width: 90%;
   padding: 10px 5px;
   margin-bottom: -0.625rem;
+
+  @media only screen and (max-width: 414px) {
+    width: 87%;
+  }
 `;
 
 export const StyledTextArea = styled('textarea')`

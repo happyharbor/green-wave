@@ -5,6 +5,10 @@ export const Container = styled('div')`
   display: inline-block;
   width: 90%;
   padding: 10px 5px 0 0;
+
+  @media only screen and (max-width: 414px) {
+    width: 87%;
+  }
 `;
 
 export const StyledInput = styled('input')`
