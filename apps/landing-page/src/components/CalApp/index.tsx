@@ -8,6 +8,7 @@
 import { useEffect } from 'react';
 import { withTranslation } from 'react-i18next';
 import Cal, { getCalApi } from '@calcom/embed-react';
+import { primaryColor } from '../../styles/styles';
 import { CalAppContainer } from './styles';
 
 const CalApp = ({ id }: { id: string }) => {
@@ -15,7 +16,7 @@ const CalApp = ({ id }: { id: string }) => {
     (async function () {
       const cal = await getCalApi();
       cal('ui', {
-        styles: { branding: { brandColor: '#18216d' } },
+        styles: { branding: { brandColor: primaryColor } },
         hideEventTypeDetails: false,
         theme: 'light',
         layout: 'month_view',
