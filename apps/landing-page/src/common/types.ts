@@ -26,6 +26,7 @@ export interface InputProps {
   type?: string;
   value?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
+  optional: boolean;
 }
 
 export interface validateProps {

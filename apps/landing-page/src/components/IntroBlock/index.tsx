@@ -12,10 +12,10 @@ const IntroColumnBlock = ({ t }: TranslationProps) => {
       <ContentWrapper>
         <h1>{t('Title')}</h1>
         <ButtonSection>
-          <Button name="BookMe" onClick={() => gScrollTo('bookme')}>
+          <Button name="BookMe" fixedWidth={true} onClick={() => gScrollTo('bookme')}>
             {t('Book Me')}
           </Button>
-          <Button name="WhoAreWe" color={secondaryColor} onClick={() => gScrollTo('whoAreWe')}>
+          <Button name="WhoAreWe" color={secondaryColor} fixedWidth={true} onClick={() => gScrollTo('whoAreWe')}>
             {t('Who Are We')}
           </Button>
         </ButtonSection>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fontFamily } from '../../styles/styles';
 
 export const StyledContainer = styled('div')`
   display: inline-block;
@@ -8,9 +9,17 @@ export const StyledContainer = styled('div')`
 `;
 
 export const StyledTextArea = styled('textarea')`
-  resize: none;
-  font-size: 0.875rem;
-  height: 185px;
+  background-color: #ffffff;
+  border: 1px solid #ededed;
+  border-radius: 2rem;
+  height: 5.5rem;
+
+  color: #7a7a7a;
+  font-family: ${fontFamily};
+  font-size: 0.93019rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `;
 
 export const Label = styled('label')`

@@ -46,7 +46,7 @@ interface WhyUsContentProps extends TranslationProps {
 const ContentContainer = ({ t, Icon, title, content }: WhyUsContentProps) => {
   return (
     <ContentContainerStyle>
-      <Icon size={64} />
+      <Icon size={100} />
       <h4>{t(title)}</h4>
       <Content>{t(content)}</Content>
     </ContentContainerStyle>

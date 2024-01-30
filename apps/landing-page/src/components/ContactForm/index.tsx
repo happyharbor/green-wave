@@ -4,13 +4,14 @@ import { withTranslation } from 'react-i18next';
 import { Button } from '../../common/Button';
 import Input from '../../common/Input';
 import TextArea from '../../common/TextArea';
+import { PageBlockProps } from '../../common/types';
 import { useForm } from '../../common/utils/useForm';
 import validate from '../../common/utils/validationRules';
 import Block from '../Block';
 import { ButtonContainer, ContactContainer, FormGroup, Span } from './styles';
-import { ContactProps, ValidationTypeProps } from './types';
+import { ValidationTypeProps } from './types';
 
-const Contact = ({ title, content, id, t }: ContactProps) => {
+const Contact = ({ id, t }: PageBlockProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate) as any;
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
@@ -24,9 +25,9 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
+      <Row>
         <Col lg={12} md={11} sm={24} xs={24}>
-          <Block title={title} content={content} />
+          <Block title={'Contact form'} content={t('ContactFormContent')} />
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <FormGroup autoComplete="off" onSubmit={handleSubmit}>
@@ -37,6 +38,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 placeholder="Your Name"
                 value={values.name || ''}
                 onChange={handleChange}
+                optional={false}
               />
               <ValidationType type="name" />
             </Col>
@@ -47,6 +49,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 placeholder="Your Email"
                 value={values.email || ''}
                 onChange={handleChange}
+                optional={false}
               />
               <ValidationType type="email" />
             </Col>
@@ -56,6 +59,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 value={values.message || ''}
                 name="Message"
                 onChange={handleChange}
+                optional={false}
               />
               <ValidationType type="message" />
             </Col>
