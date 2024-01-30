@@ -135,9 +135,17 @@ export const Styles = createGlobalStyle`
         text-align: center;
     }
 
+    .content {
+        padding: 16px;
+    }
+
     .sticky {
         position: fixed;
         top: 0;
         width: 100%;
+    }
+
+    .sticky + .content {
+        padding-top: 85px;
     }
 `;
