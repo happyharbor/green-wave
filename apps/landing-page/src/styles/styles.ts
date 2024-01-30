@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const fontColor = '#292929';
+export const paragraphFontColor = '#5A5A5A';
 export const primaryColor = '#4AFFDC';
 export const secondaryColor = '#EAC638';
 export const thirdColor = '#286F70';
@@ -106,7 +107,7 @@ export const Styles = createGlobalStyle`
     }
 
     p {
-        color: ${fontColor};
+        color: ${paragraphFontColor};
         font-size: 1.375rem;
         font-style: normal;
         font-weight: 500;
