@@ -1,5 +1,7 @@
+import { Image as AntdImage } from 'antd';
 import { withTranslation } from 'react-i18next';
-import { Container, TextWrapper, Content } from './styles';
+import { CaptionContainer } from '../../common/Wave/styles';
+import { Container, TextWrapper, Content, WaveStyle } from './styles';
 
 interface Props {
   title: string;
@@ -10,7 +12,12 @@ interface Props {
 const Block = ({ title, content, t }: Props) => {
   return (
     <Container>
-      <h2 style={{ maxWidth: 434 }}>{t(title)}</h2>
+      <CaptionContainer>
+        <WaveStyle>
+          <AntdImage src="/img/svg/wave_vector.svg" preview={false} />
+        </WaveStyle>
+        <h2 style={{ maxWidth: 434 }}>{t(title)}</h2>
+      </CaptionContainer>
       <TextWrapper>
         <Content>{t(content)}</Content>
       </TextWrapper>

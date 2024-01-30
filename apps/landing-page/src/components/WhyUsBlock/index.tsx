@@ -1,12 +1,21 @@
+import { Image as AntdImage } from 'antd';
 import { Building2, Cpu, Leaf, Presentation as PresentationIcon } from 'lucide-react';
 import { withTranslation } from 'react-i18next';
+import { Caption, CaptionContainer } from '../../common/Wave/styles';
 import { PageBlockProps, TranslationProps } from '../../common/types';
-import { ContentContainerStyle, ContentWrapper, BlockSection, Content } from './styles';
+import { BlockSection, Content, ContentContainerStyle, ContentWrapper, WaveStyle } from './styles';
 
 const WhyUsBlock = ({ t, id }: PageBlockProps) => {
   return (
     <BlockSection id={id}>
-      <h2 style={{ textAlign: 'center' }}>{t('Why us')}</h2>
+      <Caption>
+        <CaptionContainer>
+          <WaveStyle>
+            <AntdImage src="/img/svg/wave_vector.svg" preview={false} />
+          </WaveStyle>
+          <h2>{t('Why us')}</h2>
+        </CaptionContainer>
+      </Caption>
       <ContentWrapper>
         <ContentContainer
           t={t}

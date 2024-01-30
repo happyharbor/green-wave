@@ -41,3 +41,10 @@ export const Content = styled('p')`
   align-items: flex-start;
   padding-bottom: 5rem;
 `;
+
+export const WaveStyle = styled('div')`
+  position: absolute;
+  z-index: -1;
+  margin-right: 1rem;
+  right: 51.5%;
+`;

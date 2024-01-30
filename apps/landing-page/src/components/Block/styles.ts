@@ -13,3 +13,10 @@ export const TextWrapper = styled('div')`
   border-radius: 3rem;
   max-width: 434px;
 `;
+
+export const WaveStyle = styled('div')`
+  position: absolute;
+  z-index: -1;
+  margin-right: 1rem;
+  left: -7%;
+`;
