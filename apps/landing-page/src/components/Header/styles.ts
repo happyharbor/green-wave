@@ -5,6 +5,8 @@ import { fontColor, fontFamily, thirdColor } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
   padding: 0.5rem 0 0 0;
+  background-color: #ffffff;
+  z-index: 100;
 `;
 
 export const LogoContainer = styled(Link)`

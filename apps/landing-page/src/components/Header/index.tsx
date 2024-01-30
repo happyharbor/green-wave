@@ -19,7 +19,7 @@ import {
   Span,
 } from './styles';
 
-const Header = ({ t }: any) => {
+const Header = ({ t, id }: any) => {
   const [visible, setVisibility] = useState(false);
 
   const showDrawer = () => {
@@ -37,6 +37,9 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
+        <CustomNavLinkSmall onClick={() => scrollTo('intro')}>
+          <Span>{t('Home')}</Span>
+        </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo('whyGreenWave')}>
           <Span>{t('Why us')}</Span>
         </CustomNavLinkSmall>
@@ -66,7 +69,7 @@ const Header = ({ t }: any) => {
   };
 
   return (
-    <HeaderSection>
+    <HeaderSection id={id}>
       <PageContainer>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">

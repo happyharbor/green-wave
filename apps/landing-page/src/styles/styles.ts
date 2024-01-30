@@ -134,4 +134,10 @@ export const Styles = createGlobalStyle`
     .about-block-image svg {
         text-align: center;
     }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 `;

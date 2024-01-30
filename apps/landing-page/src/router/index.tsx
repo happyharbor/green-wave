@@ -9,7 +9,7 @@ const Router = () => {
   return (
     <Suspense fallback={null}>
       <Styles />
-      <Header />
+      <Header id={'header'} />
       <Routes>
         {routes.map((routeItem) => {
           return (
