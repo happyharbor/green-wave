@@ -34,7 +34,7 @@ export const useForm = (validate: any) => {
       message: event.currentTarget.elements.message.value,
     };
 
-    emailjs.send('service_5oqg10j', 'template_wxbgvux', templateParams, 'XCXE1g8cpfoIWxoIk').then(
+    emailjs.send('service_755f4qy', 'template_u5vc9pe', templateParams, 'HDTQMDSDiRuxKdNee').then(
       (response) => {
         console.log('SUCCESS!', response.status, response.text);
         setShouldSubmit(true);

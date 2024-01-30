@@ -34,7 +34,7 @@ const Contact = ({ id, t }: PageBlockProps) => {
             <Col span={24}>
               <Input
                 type="text"
-                name="Name"
+                name="name"
                 placeholder="Your Name"
                 value={values.name || ''}
                 onChange={handleChange}
@@ -45,7 +45,7 @@ const Contact = ({ id, t }: PageBlockProps) => {
             <Col span={24}>
               <Input
                 type="text"
-                name="Email"
+                name="email"
                 placeholder="Your Email"
                 value={values.email || ''}
                 onChange={handleChange}
@@ -57,7 +57,7 @@ const Contact = ({ id, t }: PageBlockProps) => {
               <TextArea
                 placeholder="Your Message"
                 value={values.message || ''}
-                name="Message"
+                name="message"
                 onChange={handleChange}
                 optional={false}
               />

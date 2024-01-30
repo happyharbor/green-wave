@@ -4,7 +4,7 @@ import { fontFamily } from '../../styles/styles';
 export const Container = styled('div')`
   display: inline-block;
   width: 90%;
-  padding: 10px 5px;
+  padding: 10px 5px 0 0;
 `;
 
 export const StyledInput = styled('input')`
