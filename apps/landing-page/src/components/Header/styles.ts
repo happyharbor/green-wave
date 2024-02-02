@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { MenuOutlined } from '@ant-design/icons';
-import { fontColor, fontFamily, secondaryColor } from '../../styles/styles';
+import { fontColor, fontFamily, primaryColor, secondaryColor } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
   padding: 0.5rem 0 0 0;
   background-color: #ffffff;
   z-index: 100;
+  box-shadow: 0 16px 30px rgb(23 31 114 / 20%);
 `;
 
 export const LogoContainer = styled(Link)`
@@ -27,7 +28,7 @@ export const Burger = styled('div')`
   display: none;
 
   svg {
-    fill: #2e186a;
+    fill: ${primaryColor};
   }
 `;
 
@@ -69,6 +70,7 @@ export const Label = styled('span')`
 `;
 
 export const Outline = styled(MenuOutlined)<any>`
+  width: 23.36px;
   font-size: 22px;
 `;
 
