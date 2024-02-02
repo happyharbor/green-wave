@@ -33,6 +33,8 @@ export const Burger = styled('div')`
 `;
 
 export const NotHidden = styled('div')`
+  display: flex;
+  align-items: center;
   @media only screen and (max-width: 890px) {
     display: none;
   }
@@ -101,5 +103,12 @@ export const LanguageSwitchContainer = styled('div')`
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: 1.1rem;
+`;
+
+export const HeaderContainer = styled('div')`
+  display: flex;
+  height: 85px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
 `;

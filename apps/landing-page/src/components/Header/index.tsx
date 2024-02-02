@@ -1,4 +1,4 @@
-import { Drawer, Row } from 'antd';
+import { Drawer } from 'antd';
 import i18n from 'i18next';
 import { useState } from 'react';
 import { withTranslation } from 'react-i18next';
@@ -8,6 +8,7 @@ import { gScrollTo } from '../../common/utils/scroll';
 import {
   Burger,
   CustomNavLinkSmall,
+  HeaderContainer,
   HeaderSection,
   Label,
   LanguageSwitch,
@@ -71,9 +72,9 @@ const Header = ({ t, id }: any) => {
   return (
     <HeaderSection id={id}>
       <PageContainer>
-        <Row justify="space-between">
+        <HeaderContainer>
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="85px" height="85px" />
+            <SvgIcon src="logo.svg" width="85px" height="49.21px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
@@ -81,7 +82,7 @@ const Header = ({ t, id }: any) => {
           <Burger onClick={showDrawer}>
             <Outline />
           </Burger>
-        </Row>
+        </HeaderContainer>
         <Drawer closable={false} open={visible} onClose={onClose}>
           <Label onClick={onClose}>
             <Menu>{t('Menu')}</Menu>
