@@ -21,10 +21,3 @@ export const Content = styled('p')`
   max-width: 890px;
   align-items: flex-start;
 `;
-
-export const WaveStyle = styled('div')`
-  position: absolute;
-  z-index: -1;
-  margin-right: 1rem;
-  left: 12%;
-`;

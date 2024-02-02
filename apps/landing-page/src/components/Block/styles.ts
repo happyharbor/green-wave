@@ -12,10 +12,3 @@ export const Container = styled('div')`
 export const TextWrapper = styled('div')`
   max-width: 434px;
 `;
-
-export const WaveStyle = styled('div')`
-  position: absolute;
-  z-index: -1;
-  margin-right: 1rem;
-  left: -7%;
-`;

@@ -40,10 +40,3 @@ export const Content = styled('p')`
     max-width: 100%;
   }
 `;
-
-export const WaveStyle = styled('div')`
-  position: absolute;
-  z-index: -1;
-  margin-right: 1rem;
-  right: 51.5%;
-`;

@@ -1,22 +1,13 @@
 import { Image as ImageAntd } from 'antd';
 import { withTranslation } from 'react-i18next';
-import { Caption, CaptionContainer } from '../../common/Wave/styles';
 import { PageBlockProps, TranslationProps } from '../../common/types';
-import { WaveStyle } from '../WhyUsBlock/styles';
 import { BlockSection, Content, ContentWrapper, Name, Title, UsSection, WhoAmIStyle } from './styles';
 
 const WhoAreWeBlock = ({ t, id }: PageBlockProps) => {
   return (
     <BlockSection id={id}>
       <ContentWrapper>
-        <Caption>
-          <CaptionContainer>
-            <WaveStyle>
-              <ImageAntd src="/img/svg/wave_vector.svg" preview={false} />
-            </WaveStyle>
-            <h2>{t('Who Are We')}</h2>
-          </CaptionContainer>
-        </Caption>
+        <h2>{t('Who Are We')}</h2>
         <Content>{t('WhoAreWeContent')}</Content>
         <UsSection>
           <WhoAmIContent image={'iliada.jpg'} name={'Iliada'} title={'Marketing Expert'} t={t} />
