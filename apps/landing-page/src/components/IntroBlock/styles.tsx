@@ -6,7 +6,7 @@ export const IntroBlockSection = styled('section')`
 `;
 
 export const ContentWrapper = styled('div')`
-  max-width: 890px;
+  max-width: 875px;
 
   @media only screen and (max-width: 768px) {
     max-width: 100%;

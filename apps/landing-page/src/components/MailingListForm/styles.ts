@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { fontFamily, thirdColor } from '../../styles/styles';
+import { fontFamily, secondaryColor } from '../../styles/styles';
 
 export const MailingContainer = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 0 100vmax ${thirdColor};
+  box-shadow: 0 0 0 100vmax ${secondaryColor};
   clip-path: inset(0 -100vmax);
-  background-color: ${thirdColor};
+  background-color: ${secondaryColor};
   width: 100%;
   text-align: center;
   color: #ffffff;
@@ -41,7 +41,7 @@ export const FormGroup = styled('form')`
 export const Span = styled('span')<any>`
   display: block;
   font-weight: 600;
-  color: rgb(255, 130, 92);
+  color: ${secondaryColor};
   height: 0.775rem;
   padding: 0 0 0.3rem 0.675rem;
 `;
@@ -55,6 +55,7 @@ export const ButtonContainer = styled('div')`
 
 export const MailingListButton = styled('button')`
   background-color: transparent;
+  text-transform: uppercase;
   font-size: 1.375rem;
   font-style: normal;
   font-weight: 900;
@@ -72,8 +73,8 @@ export const MailingListButton = styled('button')`
   &:hover,
   &:active {
     color: #fff;
-    border: 1px solid rgb(255, 130, 92);
-    background-color: rgb(255, 130, 92);
+    border: 1px solid ${secondaryColor};
+    background-color: ${secondaryColor};
   }
 
   @media only screen and (max-width: 414px) {

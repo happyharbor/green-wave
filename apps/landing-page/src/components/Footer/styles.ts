@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { secondaryColor } from '../../styles/styles';
 
 export const FooterSection = styled('footer')`
   background: rgb(241, 242, 243);
@@ -77,7 +78,7 @@ export const SocialContainer = styled('div')`
     height: 25px;
 
     &:hover {
-      fill: rgb(255, 130, 92);
+      fill: ${secondaryColor};
     }
   }
 `;

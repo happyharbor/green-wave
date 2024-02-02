@@ -4,7 +4,6 @@ export const WhatWeDoBlockSection = styled('section')`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 2rem;
 
   @media screen and (max-width: 1024px) {
   }
@@ -17,6 +16,7 @@ export const ContentWrapper = styled('div')`
 `;
 
 export const Content = styled('p')`
+  padding: 0 2rem;
   display: flex;
   max-width: 890px;
   align-items: flex-start;

@@ -8,7 +8,7 @@ import { PageBlockProps } from '../../common/types';
 import { useForm } from '../../common/utils/useForm';
 import validate from '../../common/utils/validationRules';
 import Block from '../Block';
-import { ButtonContainer, ContactContainer, FormGroup, Span } from './styles';
+import { ButtonContainer, ContactContainer, FormGroup, FormGroupContainer, Span } from './styles';
 import { ValidationTypeProps } from './types';
 
 const Contact = ({ id, t }: PageBlockProps) => {
@@ -25,50 +25,46 @@ const Contact = ({ id, t }: PageBlockProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row>
-        <Col lg={12} md={11} sm={24} xs={24}>
-          <Block title={'Contact form'} content={t('ContactFormContent')} />
-        </Col>
-        <Col lg={12} md={12} sm={24} xs={24}>
-          <FormGroup autoComplete="on" onSubmit={handleSubmit}>
-            <Col span={24}>
-              <Input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={values.name || ''}
-                onChange={handleChange}
-                optional={false}
-              />
-              <ValidationType type="name" />
-            </Col>
-            <Col span={24}>
-              <Input
-                type="text"
-                name="email"
-                placeholder="Your Email"
-                value={values.email || ''}
-                onChange={handleChange}
-                optional={false}
-              />
-              <ValidationType type="email" />
-            </Col>
-            <Col span={24}>
-              <TextArea
-                placeholder="Your Message"
-                value={values.message || ''}
-                name="message"
-                onChange={handleChange}
-                optional={false}
-              />
-              <ValidationType type="message" />
-            </Col>
-            <ButtonContainer>
-              <Button name="submit">{t('Submit')}</Button>
-            </ButtonContainer>
-          </FormGroup>
-        </Col>
-      </Row>
+      <Block title={'Contact form'} content={t('ContactFormContent')} />
+      <FormGroup autoComplete="on" onSubmit={handleSubmit}>
+        <FormGroupContainer>
+          <div>
+            <Input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={values.name || ''}
+              onChange={handleChange}
+              optional={false}
+            />
+            <ValidationType type="name" />
+          </div>
+          <div>
+            <Input
+              type="text"
+              name="email"
+              placeholder="Your Email"
+              value={values.email || ''}
+              onChange={handleChange}
+              optional={false}
+            />
+            <ValidationType type="email" />
+          </div>
+          <div>
+            <TextArea
+              placeholder="Your Message"
+              value={values.message || ''}
+              name="message"
+              onChange={handleChange}
+              optional={false}
+            />
+            <ValidationType type="message" />
+          </div>
+          <ButtonContainer>
+            <Button name="submit">{t('Submit')}</Button>
+          </ButtonContainer>
+        </FormGroupContainer>
+      </FormGroup>
     </ContactContainer>
   );
 };

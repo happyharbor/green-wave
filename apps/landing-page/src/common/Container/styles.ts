@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 export const StyledContainer = styled('div')<{ $border?: boolean }>`
   display: flex;
-  padding-bottom: 2.25rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 9.75rem;
+  gap: 12.75rem;
   flex-shrink: 0;
 `;
 

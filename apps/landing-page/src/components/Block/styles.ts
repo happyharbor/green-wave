@@ -5,12 +5,12 @@ export const Content = styled('p')`
 `;
 
 export const Container = styled('div')`
+  padding: 0 2rem;
   position: relative;
-  max-width: 700px;
+  width: 100%;
 `;
 
 export const TextWrapper = styled('div')`
-  border-radius: 3rem;
   max-width: 434px;
 `;
 

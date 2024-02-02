@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const fontColor = '#292929';
 export const paragraphFontColor = '#5A5A5A';
 export const primaryColor = '#4AFFDC';
-export const secondaryColor = '#EAC638';
+export const secondaryColor = '#9747FF';
 export const thirdColor = '#286F70';
 
 export const fontFamily = "'Roboto', sans-serif";
@@ -41,7 +41,7 @@ export const Styles = createGlobalStyle`
         transition: all 0.3s ease-in-out;  
         outline: none;
         width: 100%;  
-        padding: 1rem 1.25rem;
+        padding: 1rem 0;
 
         :focus-within {
             background: none;
@@ -70,6 +70,7 @@ export const Styles = createGlobalStyle`
     h1 {
         font-size: 5rem;
         font-weight: 900;
+        margin: 4.15rem 0 7rem 0;
 
         @media only screen and (max-width: 414px) {
             font-size: 4rem;
@@ -108,7 +109,7 @@ export const Styles = createGlobalStyle`
 
     p {
         color: ${paragraphFontColor};
-        font-size: 1.375rem;
+        font-size: 1.125rem;
         font-style: normal;
         font-weight: 500;
         margin: 0;
@@ -137,7 +138,7 @@ export const Styles = createGlobalStyle`
     }
 
     .content {
-        padding: 16px;
+        padding-top: 16px;
     }
 
     .sticky {

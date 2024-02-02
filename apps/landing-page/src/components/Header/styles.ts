@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { MenuOutlined } from '@ant-design/icons';
-import { fontColor, fontFamily, thirdColor } from '../../styles/styles';
+import { fontColor, fontFamily, secondaryColor } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
   padding: 0.5rem 0 0 0;
@@ -44,7 +44,7 @@ export const Menu = styled('p')`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
-  font-size: 1.125rem;
+  font-size: 1.3125rem;
   font-weight: 800;
   color: ${fontColor};
   font-family: ${fontFamily};
@@ -79,7 +79,7 @@ export const Span = styled('span')`
   &:hover,
   &:active,
   &:focus {
-    color: ${thirdColor};
+    color: ${secondaryColor};
   }
 `;
 

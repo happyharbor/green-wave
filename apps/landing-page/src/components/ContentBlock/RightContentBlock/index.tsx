@@ -17,7 +17,7 @@ const RightBlock = ({ title, content, buttons, icon, t, id }: ContentBlockProps)
               {typeof buttons === 'object' &&
                 buttons.map((item: ContentBlockButtonProps, id: number) => {
                   return (
-                    <Button key={id} color={item.color} fixedWidth={true} onClick={item.onClick}>
+                    <Button key={id} color={item.color} fixedWidth={12.5} onClick={item.onClick}>
                       {t(item.title)}
                     </Button>
                   );

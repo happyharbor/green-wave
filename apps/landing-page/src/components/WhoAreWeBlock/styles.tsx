@@ -5,7 +5,6 @@ export const BlockSection = styled('section')`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 2rem;
 
   @media screen and (max-width: 1024px) {
   }

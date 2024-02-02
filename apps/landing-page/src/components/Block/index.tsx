@@ -16,7 +16,7 @@ const Block = ({ title, content, t }: Props) => {
         <WaveStyle>
           <AntdImage src="/img/svg/wave_vector.svg" preview={false} />
         </WaveStyle>
-        <h2 style={{ maxWidth: 434 }}>{t(title)}</h2>
+        <h2>{t(title)}</h2>
       </CaptionContainer>
       <TextWrapper>
         <Content>{t(content)}</Content>
