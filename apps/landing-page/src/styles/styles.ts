@@ -82,8 +82,28 @@ export const Styles = createGlobalStyle`
         font-weight: 700;
         margin: 0 0 1rem 0;
 
-        @media only screen and (max-width: 414px) {
-            font-size: 3.5rem;
+        background:
+                radial-gradient(100% 58% at top   ,${primaryColor}   99%,${fontColor}) calc(0*100%/3) 0,
+                radial-gradient(100% 58% at bottom,${fontColor} 99%,${primaryColor}  ) calc(3*100%/3) 0,
+                radial-gradient(100% 58% at top   ,${primaryColor}   99%,${fontColor}) calc(6*100%/3) 0,
+                radial-gradient(100% 58% at bottom,${fontColor} 99%,${primaryColor}  ) calc(9*100%/3) 0;
+        background-size:50% 110%;
+        background-repeat:no-repeat;
+        -webkit-background-clip:text;
+        color:transparent;
+        background-clip:text;
+        display:inline-block;
+        padding:20px;
+        animation: move 5s infinite linear;
+    }
+
+    @keyframes move {
+        to {
+            background-position:
+                    calc(-6*100%/3) 0,
+                    calc(-3*100%/3) 0,
+                    calc(0*100%/3) 0,
+                    calc(3*100%/3) 0;
         }
     }
     
