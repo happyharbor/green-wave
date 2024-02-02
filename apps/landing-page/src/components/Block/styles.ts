@@ -7,7 +7,6 @@ export const Content = styled('p')`
 export const Container = styled('div')`
   padding: 0 2rem;
   position: relative;
-  width: 100%;
 `;
 
 export const TextWrapper = styled('div')`

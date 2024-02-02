@@ -4,13 +4,14 @@ import { secondaryColor } from '../../styles/styles';
 export const ContactContainer = styled('div')`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 4rem;
   @media only screen and (max-width: 1024px) {
   }
 `;
 
 export const FormGroup = styled('form')`
-  width: 100%;
   display: flex;
   justify-content: center;
 

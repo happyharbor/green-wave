@@ -1,4 +1,3 @@
-import { Col, Row } from 'antd';
 import { Zoom } from 'react-awesome-reveal';
 import { withTranslation } from 'react-i18next';
 import { Button } from '../../common/Button';

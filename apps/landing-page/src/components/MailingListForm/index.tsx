@@ -54,7 +54,11 @@ const Contact = ({ t }: TranslationProps) => {
         />
         <ValidationType type="email" />
         <ButtonContainer>
-          <MailingListButton name="submit">{t("Don't Leave Me Out")}</MailingListButton>
+          <MailingListButton name="submit">
+            {t("Don't Leave Me Out")
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '')}
+          </MailingListButton>
         </ButtonContainer>
         <CheckboxContainer>
           <input
