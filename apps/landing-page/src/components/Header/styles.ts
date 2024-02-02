@@ -57,8 +57,7 @@ export const CustomNavLinkSmall = styled(NavLink)`
   margin: 0 0 0 2.5rem;
 
   @media only screen and (max-width: 768px) {
-    padding-left: 9rem;
-    margin: 1.25rem 2rem;
+    margin: 0;
   }
 `;
 
@@ -69,7 +68,7 @@ export const Label = styled('span')`
   text-align: right;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 `;
 
 export const Span = styled('span')`
@@ -110,5 +109,16 @@ export const HeaderContainer = styled('div')`
 
   @media only screen and (max-width: 414px) {
     padding: 0 1rem;
+  }
+`;
+
+export const MenuItemContainer = styled('div')`
+  @media only screen and (max-width: 768px) {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2.5rem;
   }
 `;

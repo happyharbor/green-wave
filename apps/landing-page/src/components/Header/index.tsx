@@ -17,6 +17,7 @@ import {
   LanguageSwitchContainer,
   LogoContainer,
   Menu,
+  MenuItemContainer,
   NotHidden,
   Span,
 } from './styles';
@@ -38,7 +39,7 @@ const Header = ({ t, id }: any) => {
       setVisibility(false);
     };
     return (
-      <>
+      <MenuItemContainer>
         <CustomNavLinkSmall onClick={() => scrollTo('intro')}>
           <Span>{t('Home')}</Span>
         </CustomNavLinkSmall>
@@ -66,7 +67,7 @@ const Header = ({ t, id }: any) => {
             </LanguageSwitchContainer>
           </Span>
         </CustomNavLinkSmall>
-      </>
+      </MenuItemContainer>
     );
   };
 
@@ -84,7 +85,13 @@ const Header = ({ t, id }: any) => {
             <MenuIcon color={primaryColor} size={36} strokeWidth={2.5} />
           </Burger>
         </HeaderContainer>
-        <Drawer bodyStyle={{ padding: '1.5rem 1rem' }} closable={false} open={visible} onClose={onClose}>
+        <Drawer
+          contentWrapperStyle={{ width: '300px' }}
+          bodyStyle={{ padding: '1.5rem 1rem' }}
+          closable={false}
+          open={visible}
+          onClose={onClose}
+        >
           <Label onClick={onClose}>
             <Menu>{t('Menu')}</Menu>
             <MenuIcon color={primaryColor} size={36} strokeWidth={2.5} />
