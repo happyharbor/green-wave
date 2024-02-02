@@ -64,6 +64,7 @@ export const Styles = createGlobalStyle`
       
         @media only screen and (max-width: 414px) {
           font-size: 32px;
+            padding-bottom: 2rem;
         }
     }
     
@@ -73,7 +74,9 @@ export const Styles = createGlobalStyle`
         margin: 4.15rem 0 7rem 0;
 
         @media only screen and (max-width: 414px) {
-            font-size: 4rem;
+            font-size: 2.1875rem;
+            line-height: 3rem;
+            margin: 5.34375rem 0 7.09375rem 0;
         }
     }
     
@@ -95,6 +98,13 @@ export const Styles = createGlobalStyle`
         display:inline-block;
         padding:20px;
         animation: move 5s infinite linear;
+
+        @media only screen and (max-width: 414px) {
+            font-size: 1.875rem;
+            padding-left: 0;
+            padding-bottom: 2rem;
+            margin: 0;
+        }
     }
 
     @keyframes move {
@@ -113,7 +123,7 @@ export const Styles = createGlobalStyle`
         margin: 0;
 
         @media only screen and (max-width: 414px) {
-            font-size: 1.6rem;
+            font-size: 2.1rem;
         }
     }
 
@@ -123,7 +133,8 @@ export const Styles = createGlobalStyle`
         margin: 0;
 
         @media only screen and (max-width: 414px) {
-            font-size: 1.4rem;
+            font-size: 1.125rem;
+            padding-bottom: 0;
         }
     }
 
@@ -135,7 +146,7 @@ export const Styles = createGlobalStyle`
         margin: 0;
 
         @media only screen and (max-width: 414px) {
-            font-size: 1.3rem;
+            font-size: 1rem;
         }
     }
 

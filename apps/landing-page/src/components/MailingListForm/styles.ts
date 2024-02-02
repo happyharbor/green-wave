@@ -36,6 +36,11 @@ export const FormGroup = styled('form')`
     width: 50%;
     max-width: 100%;
   }
+
+  @media only screen and (max-width: 414px) {
+    width: 70%;
+    max-width: 100%;
+  }
 `;
 
 export const Span = styled('span')<any>`

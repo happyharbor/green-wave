@@ -9,6 +9,9 @@ export const ContactContainer = styled('div')`
   gap: 4rem;
   @media only screen and (max-width: 1024px) {
   }
+  @media only screen and (max-width: 414px) {
+    gap: 0;
+  }
 `;
 
 export const FormGroup = styled('form')`

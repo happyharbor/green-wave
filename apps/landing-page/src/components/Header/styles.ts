@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { MenuOutlined } from '@ant-design/icons';
 import { fontColor, fontFamily, primaryColor, secondaryColor } from '../../styles/styles';
 
 export const HeaderSection = styled('header')`
@@ -8,6 +7,10 @@ export const HeaderSection = styled('header')`
   background-color: #ffffff;
   z-index: 100;
   box-shadow: 0 16px 30px rgb(23 31 114 / 20%);
+
+  @media only screen and (max-width: 414px) {
+    padding: 0;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -22,7 +25,6 @@ export const NavLink = styled('div')`
 export const Burger = styled('div')`
   @media only screen and (max-width: 890px) {
     display: flex;
-    padding-right: 1.5rem;
   }
 
   display: none;
@@ -61,7 +63,6 @@ export const CustomNavLinkSmall = styled(NavLink)`
 `;
 
 export const Label = styled('span')`
-  padding-top: 0.9rem;
   font-weight: 500;
   color: ${fontColor};
   font-family: ${fontFamily};
@@ -69,11 +70,6 @@ export const Label = styled('span')`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-`;
-
-export const Outline = styled(MenuOutlined)<any>`
-  width: 23.36px;
-  font-size: 22px;
 `;
 
 export const Span = styled('span')`
@@ -111,4 +107,8 @@ export const HeaderContainer = styled('div')`
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5rem;
+
+  @media only screen and (max-width: 414px) {
+    padding: 0 1rem;
+  }
 `;

@@ -1,10 +1,12 @@
 import { Drawer } from 'antd';
 import i18n from 'i18next';
+import { MenuIcon } from 'lucide-react';
 import { useState } from 'react';
 import { withTranslation } from 'react-i18next';
 import { PageContainer } from '../../common/Container/styles';
 import { SvgIcon } from '../../common/SvgIcon';
 import { gScrollTo } from '../../common/utils/scroll';
+import { primaryColor } from '../../styles/styles';
 import {
   Burger,
   CustomNavLinkSmall,
@@ -16,7 +18,6 @@ import {
   LogoContainer,
   Menu,
   NotHidden,
-  Outline,
   Span,
 } from './styles';
 
@@ -80,13 +81,13 @@ const Header = ({ t, id }: any) => {
             <MenuItem />
           </NotHidden>
           <Burger onClick={showDrawer}>
-            <Outline />
+            <MenuIcon color={primaryColor} size={36} strokeWidth={2.5} />
           </Burger>
         </HeaderContainer>
-        <Drawer closable={false} open={visible} onClose={onClose}>
+        <Drawer bodyStyle={{ padding: '1.5rem 1rem' }} closable={false} open={visible} onClose={onClose}>
           <Label onClick={onClose}>
             <Menu>{t('Menu')}</Menu>
-            <Outline />
+            <MenuIcon color={primaryColor} size={36} strokeWidth={2.5} />
           </Label>
           <MenuItem />
         </Drawer>

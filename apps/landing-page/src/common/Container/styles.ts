@@ -6,6 +6,11 @@ export const StyledContainer = styled('div')<{ $border?: boolean }>`
   align-items: flex-start;
   gap: 12.75rem;
   flex-shrink: 0;
+
+  @media only screen and (max-width: 414px) {
+    padding: 0 1.125rem;
+    gap: 8.5625rem;
+  }
 `;
 
 export const PageContainer = styled('div')<{ $border?: boolean }>`

@@ -20,4 +20,8 @@ export const Content = styled('p')`
   display: flex;
   max-width: 890px;
   align-items: flex-start;
+
+  @media only screen and (max-width: 414px) {
+    padding: 0;
+  }
 `;

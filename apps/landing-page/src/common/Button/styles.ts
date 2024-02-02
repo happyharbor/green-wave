@@ -33,4 +33,9 @@ export const ButtonSection = styled('section')`
   display: flex;
   align-items: flex-start;
   gap: 2.25rem;
+
+  @media only screen and (max-width: 414px) {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
 `;

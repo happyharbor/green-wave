@@ -31,7 +31,7 @@ export const WhoAmIStyle = styled('div')`
 `;
 export const Name = styled('div')`
   color: ${thirdColor};
-  padding-top: 1.62rem;
+  padding-top: 1.625rem;
 `;
 export const Title = styled('div')``;
 
@@ -39,4 +39,8 @@ export const Content = styled('p')`
   display: flex;
   align-items: flex-start;
   padding-bottom: 5rem;
+
+  @media only screen and (max-width: 414px) {
+    padding-bottom: 2rem;
+  }
 `;
