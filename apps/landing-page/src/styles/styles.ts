@@ -104,6 +104,7 @@ export const Styles = createGlobalStyle`
             padding-left: 0;
             padding-bottom: 2rem;
             margin: 0;
+            background-size:50% 90%;
         }
     }
 
