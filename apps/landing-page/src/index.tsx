@@ -1,4 +1,3 @@
-import { createRoot } from 'react-dom/client';
 import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from 'react-router-dom';
 import Router from './router';
@@ -12,6 +11,4 @@ const App = () => (
   </BrowserRouter>
 );
 
-const container = document.getElementById('root');
-const root = createRoot(container!);
-root.render(<App />);
+export default App;

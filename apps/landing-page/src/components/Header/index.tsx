@@ -86,8 +86,7 @@ const Header = ({ t, id }: any) => {
           </Burger>
         </HeaderContainer>
         <Drawer
-          contentWrapperStyle={{ width: '300px' }}
-          bodyStyle={{ padding: '1.5rem 1rem' }}
+          styles={{ body: { padding: '1.5rem 1rem' }, wrapper: { width: '300px' } }}
           closable={false}
           open={visible}
           onClose={onClose}

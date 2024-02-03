@@ -34,7 +34,7 @@ const Router = () => {
               <Route
                 key={routeItem.component}
                 path={routeItem.path}
-                Component={lazy(() => import(`../pages/${routeItem.component}`))}
+                Component={lazy(() => import(`../pages/${routeItem.component}/index.tsx`))}
               />
             );
           })}

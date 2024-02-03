@@ -34,6 +34,7 @@ const WhoAmIContent = ({ t, image, name, title }: WhoAmIContentProps) => {
         src={`/img/images/whoAreWe/${image}`}
         alt={image}
         width="200px"
+        height="200px"
       />
       <Name>{t(name)}</Name>
       <Title>{t(title)}</Title>
