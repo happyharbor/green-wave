@@ -1,6 +1,5 @@
 import { lazy } from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
-import CallApp from '../../components/CalApp';
 
 const Contact = lazy(() => import('../../components/ContactForm'));
 const Container = lazy(() => import('../../common/Container'));
@@ -22,7 +21,7 @@ const Home = ({ t }: WithTranslation) => {
       <ServicesBlock id="services" />
       <WhoAreWeBlock id="whoAreWe" />
       <Contact id="contact" />
-      <CallApp id="bookme" />
+      {/*<CallApp id="bookme" />*/}
       <MailingListForm />
     </Container>
   );
