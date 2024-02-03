@@ -1,21 +1,25 @@
 import { Image as ImageAntd } from 'antd';
+import { lazy } from 'react';
 import { withTranslation } from 'react-i18next';
 import { PageBlockProps, TranslationProps } from '../../common/types';
 import { BlockSection, Content, ContentWrapper, Name, Title, UsSection, WhoAmIStyle } from './styles';
 
+const Visible = lazy(() => import('../Visible'));
 const WhoAreWeBlock = ({ t, id }: PageBlockProps) => {
   return (
     <BlockSection id={id}>
-      <ContentWrapper>
-        <h2>{t('Who Are We')}</h2>
-        <Content>{t('WhoAreWeContent')}</Content>
-        <UsSection>
-          <WhoAmIContent image={'iliada.avif'} name={'Iliada'} title={'Marketing Expert'} t={t} />
-          <WhoAmIContent image={'thodoris.avif'} name={'Thodoris'} title={'Marketing Expert'} t={t} />
-          <WhoAmIContent image={'vasia.avif'} name={'Vasia'} title={'UX/UI Designer'} t={t} />
-          <WhoAmIContent image={'giorgos.avif'} name={'Giorgos'} title={'Developer | IT Consultant'} t={t} />
-        </UsSection>
-      </ContentWrapper>
+      <Visible>
+        <ContentWrapper>
+          <h2>{t('Who Are We')}</h2>
+          <Content>{t('WhoAreWeContent')}</Content>
+          <UsSection>
+            <WhoAmIContent image={'iliada.avif'} name={'Iliada'} title={'Marketing Expert'} t={t} />
+            <WhoAmIContent image={'thodoris.avif'} name={'Thodoris'} title={'Marketing Expert'} t={t} />
+            <WhoAmIContent image={'vasia.avif'} name={'Vasia'} title={'UX/UI Designer'} t={t} />
+            <WhoAmIContent image={'giorgos.avif'} name={'Giorgos'} title={'Developer | IT Consultant'} t={t} />
+          </UsSection>
+        </ContentWrapper>
+      </Visible>
     </BlockSection>
   );
 };
