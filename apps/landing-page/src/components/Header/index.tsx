@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { withTranslation } from 'react-i18next';
 import { PageContainer } from '../../common/Container/styles';
 import { SvgIcon } from '../../common/SvgIcon';
+import { PageBlockProps } from '../../common/types.ts';
 import { gScrollTo } from '../../common/utils/scroll';
 import { primaryColor } from '../../styles/styles';
 import {
@@ -22,7 +23,7 @@ import {
   Span,
 } from './styles';
 
-const Header = ({ t, id }: any) => {
+const Header = ({ t, id }: PageBlockProps) => {
   const [visible, setVisibility] = useState(false);
 
   const showDrawer = () => {

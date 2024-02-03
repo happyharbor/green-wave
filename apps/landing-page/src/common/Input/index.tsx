@@ -1,4 +1,3 @@
-import React from 'react';
 import { withTranslation } from 'react-i18next';
 import { InputProps } from '../types';
 import { Container, StyledInput } from './styles';

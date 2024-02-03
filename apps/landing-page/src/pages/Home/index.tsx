@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { withTranslation, WithTranslation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 const Contact = lazy(() => import('../../components/ContactForm'));
 const Container = lazy(() => import('../../common/Container'));
@@ -11,7 +11,7 @@ const ServicesBlock = lazy(() => import('../../components/ServicesBlock'));
 const WhoAreWeBlock = lazy(() => import('../../components/WhoAreWeBlock'));
 const MailingListForm = lazy(() => import('../../components/MailingListForm'));
 
-const Home = ({ t }: WithTranslation) => {
+const Home = () => {
   return (
     <Container>
       <IntroBlock id={'intro'} />

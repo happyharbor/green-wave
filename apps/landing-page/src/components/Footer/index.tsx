@@ -8,7 +8,7 @@ interface SocialLinkProps {
   src: string;
 }
 
-const Footer = ({ t }: any) => {
+const Footer = () => {
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" key={src} aria-label={src}>
