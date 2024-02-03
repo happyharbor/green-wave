@@ -8,15 +8,15 @@ const Visible = lazy(() => import('../Visible'));
 const WhoAreWeBlock = ({ t, id }: PageBlockProps) => {
   return (
     <BlockSection id={id}>
-      <Visible>
+      <Visible height={605}>
         <ContentWrapper>
           <h2>{t('Who Are We')}</h2>
           <Content>{t('WhoAreWeContent')}</Content>
           <UsSection>
-            <WhoAmIContent image={'iliada.avif'} name={'Iliada'} title={'Marketing Expert'} t={t} />
-            <WhoAmIContent image={'thodoris.avif'} name={'Thodoris'} title={'Marketing Expert'} t={t} />
-            <WhoAmIContent image={'vasia.avif'} name={'Vasia'} title={'UX/UI Designer'} t={t} />
-            <WhoAmIContent image={'giorgos.avif'} name={'Giorgos'} title={'Developer | IT Consultant'} t={t} />
+            <WhoAmIContent image={'iliada.webp'} name={'Iliada'} title={'Marketing Expert'} t={t} />
+            <WhoAmIContent image={'thodoris.webp'} name={'Thodoris'} title={'Marketing Expert'} t={t} />
+            <WhoAmIContent image={'vasia.webp'} name={'Vasia'} title={'UX/UI Designer'} t={t} />
+            <WhoAmIContent image={'giorgos.webp'} name={'Giorgos'} title={'Developer | IT Consultant'} t={t} />
           </UsSection>
         </ContentWrapper>
       </Visible>

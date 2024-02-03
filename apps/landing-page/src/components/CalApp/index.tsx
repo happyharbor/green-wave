@@ -30,7 +30,7 @@ const CalApp = ({ id, t }: PageBlockProps) => {
   return (
     <CalAppContainer id={id}>
       <h2 style={{ textAlign: 'center', paddingBottom: '2rem' }}>{t('Book Me')}</h2>
-      <Visible>
+      <Visible height={542}>
         <Cal
           id={id}
           calLink="green-wave/30min"

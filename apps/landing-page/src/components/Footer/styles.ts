@@ -51,7 +51,7 @@ export const LogoContainer = styled('div')`
 
 export const SocialContainer = styled('div')`
   margin-left: auto;
-  max-width: 310px;
+  max-width: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;

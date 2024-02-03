@@ -29,9 +29,7 @@ const Footer = () => {
             </NavLink>
             <SocialContainer>
               <SocialLink href="https://www.instagram.com/" src="instagram.svg" />
-              <SocialLink href="https://twitter.com/" src="twitter.svg" />
               <SocialLink href="https://www.linkedin.com/" src="linkedin.svg" />
-              <SocialLink href="https://www.tiktok.com/" src="tiktok.svg" />
             </SocialContainer>
           </FooterContainer>
         </Container>

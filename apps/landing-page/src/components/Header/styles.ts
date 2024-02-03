@@ -113,12 +113,13 @@ export const HeaderContainer = styled('div')`
 `;
 
 export const MenuItemContainer = styled('div')`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   @media only screen and (max-width: 768px) {
     padding-top: 3rem;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     row-gap: 2.5rem;
   }
 `;
