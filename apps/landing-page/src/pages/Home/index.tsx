@@ -9,6 +9,7 @@ const TrustedByBlock = lazy(() => import('../../components/TrustedByBlock'));
 const WhyUsBlock = lazy(() => import('../../components/WhyUsBlock'));
 const ServicesBlock = lazy(() => import('../../components/ServicesBlock'));
 const WhoAreWeBlock = lazy(() => import('../../components/WhoAreWeBlock'));
+const CalendlyApp = lazy(() => import('../../components/CalendlyApp'));
 const MailingListForm = lazy(() => import('../../components/MailingListForm'));
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
       <ServicesBlock id="services" />
       <WhoAreWeBlock id="whoAreWe" />
       <Contact id="contact" />
-      {/*<CallApp id="bookme" />*/}
+      <CalendlyApp id="bookme" />
       <MailingListForm />
     </Container>
   );
