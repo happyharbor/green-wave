@@ -11,7 +11,7 @@ applications:
           commands:
             - npx turbo run build --filter=landing-page
       artifacts:
-        baseDirectory: apps/landing-page/build
+        baseDirectory: apps/landing-page/dist
         files:
           - '**/*'
       cache:
