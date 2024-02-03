@@ -30,7 +30,7 @@ const Contact = ({ id, t }: PageBlockProps) => {
           <div>
             <Input
               type="text"
-              name="name"
+              name="contactformName"
               placeholder="Your Name"
               value={values.name || ''}
               onChange={handleChange}
@@ -41,7 +41,7 @@ const Contact = ({ id, t }: PageBlockProps) => {
           <div>
             <Input
               type="text"
-              name="email"
+              name="contactFormEmail"
               placeholder="Your Email"
               value={values.email || ''}
               onChange={handleChange}

@@ -10,10 +10,10 @@ const WhoAreWeBlock = ({ t, id }: PageBlockProps) => {
         <h2>{t('Who Are We')}</h2>
         <Content>{t('WhoAreWeContent')}</Content>
         <UsSection>
-          <WhoAmIContent image={'iliada.jpg'} name={'Iliada'} title={'Marketing Expert'} t={t} />
-          <WhoAmIContent image={'thodoris.jpg'} name={'Thodoris'} title={'Marketing Expert'} t={t} />
-          <WhoAmIContent image={'vasia.jpg'} name={'Vasia'} title={'UX/UI Designer'} t={t} />
-          <WhoAmIContent image={'giorgos.jpg'} name={'Giorgos'} title={'Developer | IT Consultant'} t={t} />
+          <WhoAmIContent image={'iliada.avif'} name={'Iliada'} title={'Marketing Expert'} t={t} />
+          <WhoAmIContent image={'thodoris.avif'} name={'Thodoris'} title={'Marketing Expert'} t={t} />
+          <WhoAmIContent image={'vasia.avif'} name={'Vasia'} title={'UX/UI Designer'} t={t} />
+          <WhoAmIContent image={'giorgos.avif'} name={'Giorgos'} title={'Developer | IT Consultant'} t={t} />
         </UsSection>
       </ContentWrapper>
     </BlockSection>
@@ -32,8 +32,8 @@ const WhoAmIContent = ({ t, image, name, title }: WhoAmIContentProps) => {
         style={{ borderRadius: '50%' }}
         preview={false}
         src={`/img/images/whoAreWe/${image}`}
+        alt={image}
         width="200px"
-        height="200px"
       />
       <Name>{t(name)}</Name>
       <Title>{t(title)}</Title>

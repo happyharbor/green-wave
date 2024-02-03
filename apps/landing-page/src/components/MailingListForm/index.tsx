@@ -37,7 +37,7 @@ const Contact = ({ t }: TranslationProps) => {
       <FormGroup autoComplete="on" onSubmit={handleSubmit}>
         <Input
           type="text"
-          name="name"
+          name="mailinglistName"
           placeholder="Your Name"
           value={values.name || ''}
           onChange={handleChange}
@@ -46,7 +46,7 @@ const Contact = ({ t }: TranslationProps) => {
         <ValidationType type="name" />
         <Input
           type="text"
-          name="email"
+          name="mailinglistEmail"
           placeholder="Your Email"
           value={values.email || ''}
           onChange={handleChange}
