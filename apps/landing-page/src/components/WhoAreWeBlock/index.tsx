@@ -1,4 +1,3 @@
-import { Image as ImageAntd } from 'antd';
 import { lazy } from 'react';
 import { withTranslation } from 'react-i18next';
 import { PageBlockProps, TranslationProps } from '../../common/types';
@@ -13,10 +12,10 @@ const WhoAreWeBlock = ({ t, id }: PageBlockProps) => {
           <h2>{t('Who Are We')}</h2>
           <Content>{t('WhoAreWeContent')}</Content>
           <UsSection>
-            <WhoAmIContent image={'iliada.jpg'} name={'Iliada'} title={'Marketing Expert'} t={t} />
-            <WhoAmIContent image={'thodoris.jpg'} name={'Thodoris'} title={'Marketing Expert'} t={t} />
-            <WhoAmIContent image={'vasia.jpg'} name={'Vasia'} title={'UX/UI Designer'} t={t} />
-            <WhoAmIContent image={'giorgos.jpg'} name={'Giorgos'} title={'Developer | IT Consultant'} t={t} />
+            <WhoAmIContent image={'iliada.webp'} name={'Iliada'} title={'Marketing Expert'} t={t} />
+            <WhoAmIContent image={'thodoris.webp'} name={'Thodoris'} title={'Marketing Expert'} t={t} />
+            <WhoAmIContent image={'vasia.webp'} name={'Vasia'} title={'UX/UI Designer'} t={t} />
+            <WhoAmIContent image={'giorgos.webp'} name={'Giorgos'} title={'Developer | IT Consultant'} t={t} />
           </UsSection>
         </ContentWrapper>
       </Visible>
@@ -32,9 +31,8 @@ interface WhoAmIContentProps extends TranslationProps {
 const WhoAmIContent = ({ t, image, name, title }: WhoAmIContentProps) => {
   return (
     <WhoAmIStyle>
-      <ImageAntd
+      <img
         style={{ borderRadius: '50%' }}
-        preview={false}
         src={`/img/images/whoAreWe/${image}`}
         alt={image}
         width="200px"
