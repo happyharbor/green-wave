@@ -22,14 +22,15 @@ export interface SvgIconProps {
 export interface InputProps {
   name: string;
   placeholder: string;
-  t: any;
+  t: WithTranslation['t'];
   type?: string;
   value?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
   optional: boolean;
+  idPrefix?: string;
 }
 
-export interface validateProps {
+export interface ValidateProps {
   name: string;
   message: string;
   email: string;

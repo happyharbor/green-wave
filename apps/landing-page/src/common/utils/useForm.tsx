@@ -1,7 +1,8 @@
 import { notification } from 'antd';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { WithTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
+import { ValidateProps } from '../types.ts';
 
 interface FormElements extends HTMLFormControlsCollection {
   email: HTMLInputElement;
@@ -12,9 +13,9 @@ interface ContactFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
-export const useForm = (t: WithTranslation['t'], validate: any) => {
-  const [values, setValues] = useState({});
-  const [errors, setErrors] = useState({});
+export const useForm = (t: WithTranslation['t'], validate: (values: ValidateProps) => Partial<ValidateProps>) => {
+  const [values, setValues] = useState<ValidateProps>({ name: '', email: '', message: '' });
+  const [errors, setErrors] = useState<Partial<ValidateProps>>({});
   const [shouldSubmit, setShouldSubmit] = useState(false);
 
   const openNotificationWithIcon = () => {
@@ -47,12 +48,12 @@ export const useForm = (t: WithTranslation['t'], validate: any) => {
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
-      setValues('');
+      setValues({ name: '', email: '', message: '' });
       openNotificationWithIcon();
     }
   }, [errors, shouldSubmit]);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     event.persist();
     setValues((values) => ({
       ...values,

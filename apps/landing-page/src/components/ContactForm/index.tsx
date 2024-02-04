@@ -11,7 +11,7 @@ import { ButtonContainer, ContactContainer, FormGroup, FormGroupContainer, Span 
 import { ValidationTypeProps } from './types';
 
 const Contact = ({ id, t }: PageBlockProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(t, validate) as any;
+  const { values, errors, handleChange, handleSubmit } = useForm(t, validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type];
@@ -30,22 +30,24 @@ const Contact = ({ id, t }: PageBlockProps) => {
           <div>
             <Input
               type="text"
-              name="contactformName"
+              name="name"
               placeholder="Your Name"
               value={values.name || ''}
               onChange={handleChange}
               optional={false}
+              idPrefix={'contact'}
             />
             <ValidationType type="name" />
           </div>
           <div>
             <Input
               type="text"
-              name="contactFormEmail"
+              name="email"
               placeholder="Your Email"
               value={values.email || ''}
               onChange={handleChange}
               optional={false}
+              idPrefix={'contact'}
             />
             <ValidationType type="email" />
           </div>

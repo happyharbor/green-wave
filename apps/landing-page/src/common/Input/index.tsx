@@ -2,13 +2,13 @@ import { withTranslation } from 'react-i18next';
 import { InputProps } from '../types';
 import { Container, StyledInput } from './styles';
 
-const Input = ({ name, placeholder, onChange, optional, value, t }: InputProps) => (
+const Input = ({ name, placeholder, onChange, optional, value, idPrefix, t }: InputProps) => (
   <Container>
     <StyledInput
       placeholder={`${t(placeholder)}${optional ? '' : '*'}`}
       value={value}
       name={name}
-      id={name}
+      id={idPrefix + name}
       onChange={onChange}
     />
   </Container>

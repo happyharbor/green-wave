@@ -1,7 +1,7 @@
-import { validateProps } from '../types';
+import { ValidateProps } from '../types';
 
-export default function validate(values: validateProps) {
-  let errors = {} as validateProps;
+export default function validate(values: ValidateProps) {
+  const errors: Partial<ValidateProps> = {};
 
   if (!values.name) {
     errors.name = 'Name is required';

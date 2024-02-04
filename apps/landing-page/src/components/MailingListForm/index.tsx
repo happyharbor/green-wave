@@ -18,7 +18,7 @@ import {
 import { ValidationTypeProps } from './types';
 
 const Contact = ({ t }: TranslationProps) => {
-  const { values, errors, handleChange, handleSubmit } = useMailingListForm(t, validate) as any;
+  const { values, errors, handleChange, handleSubmit } = useMailingListForm(t, validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type];
@@ -37,20 +37,22 @@ const Contact = ({ t }: TranslationProps) => {
       <FormGroup autoComplete="on" onSubmit={handleSubmit}>
         <Input
           type="text"
-          name="mailinglistName"
+          name="name"
           placeholder="Your Name"
           value={values.name || ''}
           onChange={handleChange}
           optional={false}
+          idPrefix={'mailing'}
         />
         <ValidationType type="name" />
         <Input
           type="text"
-          name="mailinglistEmail"
+          name="email"
           placeholder="Your Email"
           value={values.email || ''}
           onChange={handleChange}
           optional={false}
+          idPrefix={'mailing'}
         />
         <ValidationType type="email" />
         <ButtonContainer>
@@ -61,13 +63,7 @@ const Contact = ({ t }: TranslationProps) => {
           </MailingListButton>
         </ButtonContainer>
         <CheckboxContainer>
-          <input
-            type="checkbox"
-            value={values.message || ''}
-            name="consent"
-            onChange={handleChange}
-            checked={values.consent}
-          />
+          <input type="checkbox" name="consent" onChange={handleChange} checked={values.consent} />
           <CheckboxLabel>{t('Consent')}</CheckboxLabel>
         </CheckboxContainer>
         <ValidationType type="consent" />

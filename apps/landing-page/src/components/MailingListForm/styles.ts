@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontFamily, secondaryColor } from '../../styles/styles';
+import { fontColor, fontFamily, primaryColor, secondaryColor } from '../../styles/styles';
 
 export const MailingContainer = styled('div')`
   display: flex;
@@ -46,7 +46,7 @@ export const FormGroup = styled('form')`
 export const Span = styled('span')<any>`
   display: block;
   font-weight: 600;
-  color: ${secondaryColor};
+  color: ${fontColor};
   height: 0.775rem;
   padding: 0 0 0.3rem 0.675rem;
 `;
@@ -77,9 +77,8 @@ export const MailingListButton = styled('button')`
 
   &:hover,
   &:active {
-    color: #fff;
-    border: 1px solid ${secondaryColor};
-    background-color: ${secondaryColor};
+    border: 5px solid ${primaryColor};
+    color: ${primaryColor};
   }
 
   @media only screen and (max-width: 414px) {

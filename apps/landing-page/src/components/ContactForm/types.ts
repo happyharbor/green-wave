@@ -1,10 +1,13 @@
+import { WithTranslation } from 'react-i18next';
+import { ValidateProps } from '../../common/types.ts';
+
 export interface ContactProps {
   title: string;
   content: string;
   id: string;
-  t: any;
+  t: WithTranslation['t'];
 }
 
 export interface ValidationTypeProps {
-  type: any;
+  type: keyof ValidateProps;
 }

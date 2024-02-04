@@ -6,12 +6,16 @@ import { MailingListValidateErrors, MailingListValidateProps } from '../types';
 interface FormElements extends HTMLFormControlsCollection {
   email: HTMLInputElement;
   name: HTMLInputElement;
+  consent: HTMLInputElement;
 }
 interface ContactFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
-export const useMailingListForm = (t: WithTranslation['t'], validate: any) => {
+export const useMailingListForm = (
+  t: WithTranslation['t'],
+  validate: (values: MailingListValidateProps) => MailingListValidateErrors,
+) => {
   const [values, setValues] = useState<MailingListValidateProps>({ name: '', email: '', consent: false });
   const [errors, setErrors] = useState<MailingListValidateErrors>({});
   const [shouldSubmit, setShouldSubmit] = useState(false);
@@ -62,15 +66,14 @@ export const useMailingListForm = (t: WithTranslation['t'], validate: any) => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
       setValues({ name: '', email: '', consent: false });
       openNotificationWithIcon();
-      setShouldSubmit(false);
     }
   }, [errors, shouldSubmit]);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     event.persist();
     setValues((values) => ({
       ...values,
-      [event.target.name]: event.target.value || event.target.checked,
+      [event.target.name]: event.target.value || (isHTMLInputElement(event.target) && event.target.checked),
     }));
     setErrors((errors) => ({ ...errors, [event.target.name]: '' }));
   };
@@ -81,4 +84,8 @@ export const useMailingListForm = (t: WithTranslation['t'], validate: any) => {
     values,
     errors,
   };
+};
+
+const isHTMLInputElement = (element: HTMLInputElement | HTMLTextAreaElement): element is HTMLInputElement => {
+  return 'value' in element;
 };
