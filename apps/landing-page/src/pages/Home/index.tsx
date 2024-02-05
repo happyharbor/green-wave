@@ -5,7 +5,6 @@ const Contact = lazy(() => import('../../components/ContactForm'));
 const Container = lazy(() => import('../../common/Container'));
 const IntroBlock = lazy(() => import('../../components/IntroBlock'));
 const WhatWeDoBlock = lazy(() => import('../../components/WhatWeDoBlock'));
-const TrustedByBlock = lazy(() => import('../../components/TrustedByBlock'));
 const WhyUsBlock = lazy(() => import('../../components/WhyUsBlock'));
 const ServicesBlock = lazy(() => import('../../components/ServicesBlock'));
 const WhoAreWeBlock = lazy(() => import('../../components/WhoAreWeBlock'));
@@ -17,7 +16,6 @@ const Home = () => {
     <Container>
       <IntroBlock id={'intro'} />
       <WhatWeDoBlock id={'whatWeDo'} />
-      <TrustedByBlock />
       <WhyUsBlock id="whyGreenWave" />
       <ServicesBlock id="services" />
       <WhoAreWeBlock id="whoAreWe" />
