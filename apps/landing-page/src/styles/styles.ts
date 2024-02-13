@@ -181,6 +181,6 @@ export const Styles = createGlobalStyle`
     }
 
     .sticky + .content {
-        padding-top: 85px;
+        padding-top: 109px;
     }
 `;

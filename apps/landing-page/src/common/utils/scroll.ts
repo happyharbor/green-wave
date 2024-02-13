@@ -1,6 +1,8 @@
 export const gScrollTo = (id: string) => {
-  const yOffset = -100;
+  const yOffset = -109;
   const element = document.getElementById(id) as HTMLDivElement;
-  const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+  let top = element.getBoundingClientRect().top;
+  let scrollY = window.scrollY;
+  const y = top + scrollY + yOffset;
   window.scrollTo({ top: y, behavior: 'smooth' });
 };
