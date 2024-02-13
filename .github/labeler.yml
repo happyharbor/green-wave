@@ -1,0 +1,16 @@
+automation:
+- changed-files:
+  - any-glob-to-any-file: .github/**/*
+
+documentation:
+- changed-files:
+  - any-glob-to-any-file: '*.md'
+
+landing-page:
+- changed-files:
+  - any-glob-to-any-file: apps/landing-page/**/*
+  - any-glob-to-any-file: packages/eslint-config/**/*
+  - any-glob-to-any-file: packages/tsconfig/base.json
+
+release:
+  - base-branch: 'main'
