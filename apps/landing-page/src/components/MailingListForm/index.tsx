@@ -24,7 +24,7 @@ const Contact = ({ t }: TranslationProps) => {
     const ErrorMessage = errors[type];
     return (
       <Zoom direction="left">
-        <Span erros={errors[type]}>{ErrorMessage}</Span>
+        <Span errors={errors[type]}>{ErrorMessage}</Span>
       </Zoom>
     );
   };

@@ -43,11 +43,10 @@ export const FormGroup = styled('form')`
   }
 `;
 
-export const Span = styled('span')<any>`
+export const Span = styled('span')<{ errors: string | undefined }>`
   display: block;
   font-weight: 600;
   color: ${fontColor};
-  height: 0.775rem;
   padding: 0 0 0.3rem 0.675rem;
 `;
 

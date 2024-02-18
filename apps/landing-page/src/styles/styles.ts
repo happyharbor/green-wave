@@ -2,9 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 export const fontColor = '#292929';
 export const paragraphFontColor = '#5A5A5A';
-export const primaryColor = '#4AFFDC';
+export const primaryColor = '#15a8b2';
 export const secondaryColor = '#9747FF';
-export const thirdColor = '#286F70';
 
 export const fontFamily = "'Roboto', sans-serif";
 
@@ -120,12 +119,12 @@ export const Styles = createGlobalStyle`
     }
     
     h3{
-        font-size: 1.75rem;
-        font-weight: 900;
+        font-size: 1.375rem;
+        font-weight: 600;
         margin: 0;
 
         @media only screen and (max-width: 414px) {
-            font-size: 2.1rem;
+            font-size: 1.125rem;
         }
     }
 
@@ -143,6 +142,7 @@ export const Styles = createGlobalStyle`
     p {
         color: ${paragraphFontColor};
         font-size: 1.125rem;
+        line-height: 2.0625rem;
         font-style: normal;
         font-weight: 500;
         margin: 0;

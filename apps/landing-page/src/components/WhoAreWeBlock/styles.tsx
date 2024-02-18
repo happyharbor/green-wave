@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { thirdColor } from '../../styles/styles';
+import { secondaryColor } from '../../styles/styles';
 
 export const BlockSection = styled('section')`
   display: flex;
@@ -30,7 +30,7 @@ export const WhoAmIStyle = styled('div')`
   font-size: 1.375rem;
 `;
 export const Name = styled('div')`
-  color: ${thirdColor};
+  color: ${secondaryColor};
   padding-top: 1.625rem;
 `;
 export const Title = styled('div')``;

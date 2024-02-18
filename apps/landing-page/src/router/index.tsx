@@ -27,19 +27,17 @@ const Router = () => {
     <Suspense fallback={null}>
       <Styles />
       <Header id={'header'} />
-      <div className={'content'}>
-        <Routes>
-          {routes.map((routeItem) => {
-            return (
-              <Route
-                key={routeItem.component}
-                path={routeItem.path}
-                Component={lazy(() => import(`../pages/${routeItem.component}/index.tsx`))}
-              />
-            );
-          })}
-        </Routes>
-      </div>
+      <Routes>
+        {routes.map((routeItem) => {
+          return (
+            <Route
+              key={routeItem.component}
+              path={routeItem.path}
+              Component={lazy(() => import(`../pages/${routeItem.component}/index.tsx`))}
+            />
+          );
+        })}
+      </Routes>
       <Footer />
     </Suspense>
   );

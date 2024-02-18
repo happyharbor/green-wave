@@ -1,15 +1,36 @@
 import styled from 'styled-components';
-import { fontColor, fontFamily, secondaryColor } from '../../styles/styles';
+import { fontFamily, primaryColor, secondaryColor } from '../../styles/styles';
+import { ButtonType } from '../types.ts';
 
-export const StyledButton = styled('button')<{ $color?: string; $fixedWidth?: number; $length?: number }>`
-  background: ${(p) => p.$color || '#4AFFDC'};
+const width = (type: ButtonType) => {
+  switch (type) {
+    case ButtonType.Small:
+      return 12.125;
+    case ButtonType.Normal:
+    default:
+      return 19.0625;
+  }
+};
+
+const widthMobile = (type: ButtonType) => {
+  switch (type) {
+    case ButtonType.Small:
+      return 9.25;
+    case ButtonType.Normal:
+    default:
+      return 14;
+  }
+};
+
+export const StyledButton = styled('button')<{ $color?: string; $type?: ButtonType; $length?: number }>`
+  background: ${(p) => p.$color || primaryColor};
 
   font-size: 1.375rem;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 900;
   line-height: 1.7875rem; /* 130% */
-  color: ${fontColor};
+  color: #ffffff;
   font-family: ${fontFamily};
 
   width: 100%;
@@ -17,7 +38,7 @@ export const StyledButton = styled('button')<{ $color?: string; $fixedWidth?: nu
   border-radius: 2rem;
   padding: 0.625rem;
   cursor: pointer;
-  max-width: ${(p) => (p.$fixedWidth ? `${p.$fixedWidth}rem` : '100%')};
+  max-width: ${(p) => (p.$type ? `${width(p.$type)}rem` : '100%')};
   transition: all 0.3s ease-in-out;
   box-shadow: 0 16px 30px rgb(23 31 114 / 20%);
 
@@ -26,6 +47,11 @@ export const StyledButton = styled('button')<{ $color?: string; $fixedWidth?: nu
     color: #fff;
     border: 1px solid ${secondaryColor};
     background-color: ${secondaryColor};
+  }
+
+  @media only screen and (max-width: 414px) {
+    font-size: 1rem;
+    max-width: ${(p) => (p.$type ? `${widthMobile(p.$type)}rem` : '100%')};
   }
 `;
 

@@ -1,8 +1,8 @@
-import { ButtonProps } from '../types';
+import { ButtonProps, ButtonType } from '../types';
 import { StyledButton } from './styles';
 
-export const Button = ({ color, fixedWidth, children, onClick }: ButtonProps) => (
-  <StyledButton $color={color} $fixedWidth={fixedWidth} onClick={onClick}>
+export const Button = ({ color, type = ButtonType.Normal, children, onClick }: ButtonProps) => (
+  <StyledButton $color={color} $type={type} onClick={onClick}>
     {children
       ?.toString()
       .normalize('NFD')

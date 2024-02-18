@@ -5,9 +5,14 @@ export interface ContainerProps {
   children: React.ReactNode;
 }
 
+export enum ButtonType {
+  Normal = 'Normal',
+  Small = 'Small',
+}
 export interface ButtonProps {
   color?: string;
   fixedWidth?: number;
+  type?: ButtonType;
   name?: string;
   children: React.ReactNode;
   onClick?: () => void;
