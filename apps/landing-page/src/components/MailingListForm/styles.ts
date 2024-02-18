@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { fontColor, fontFamily, primaryColor, secondaryColor } from '../../styles/styles';
+import { fontColor, fontFamily, primaryColor } from '../../styles/styles';
 
 export const MailingContainer = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 0 100vmax ${secondaryColor};
+  box-shadow: 0 0 0 100vmax ${primaryColor};
   clip-path: inset(0 -100vmax);
-  background-color: ${secondaryColor};
+  background-color: ${primaryColor};
   width: 100%;
   text-align: center;
   color: #ffffff;
@@ -15,25 +15,37 @@ export const MailingContainer = styled('div')`
   }
 `;
 
-export const Header = styled('h4')`
-  font-size: 2.3rem;
+export const Header = styled('h2')`
+  font-size: 3.75rem;
+  margin: 0;
   font-weight: 900;
   color: #ffffff;
-  padding: 2rem 0;
+  padding: 4.375rem 0 2.6875rem 0;
+
+  @media only screen and (max-width: 414px) {
+    font-size: 3.333rem;
+  }
 `;
 
 export const Content = styled('p')`
   color: #ffffff;
+  font-weight: 800;
+  font-size: 1.625rem;
+  padding-bottom: 2.411875rem;
+
+  @media only screen and (max-width: 414px) {
+    font-size: 1.444rem;
+  }
 `;
 
 export const FormGroup = styled('form')`
   display: flex;
   flex-direction: column;
-  width: 30%;
-  padding-top: 1rem;
+  row-gap: 0.625rem;
+  width: 400px;
+  margin-bottom: 5.1875rem;
 
   @media only screen and (max-width: 1045px) {
-    width: 50%;
     max-width: 100%;
   }
 
@@ -47,13 +59,11 @@ export const Span = styled('span')<{ errors: string | undefined }>`
   display: block;
   font-weight: 600;
   color: ${fontColor};
-  padding: 0 0 0.3rem 0.675rem;
+  //padding: 0 0 0.3rem 0.675rem;
 `;
 
 export const ButtonContainer = styled('div')`
-  padding: 10px 5px 0 0;
   @media only screen and (max-width: 414px) {
-    padding-top: 0.75rem;
   }
 `;
 
@@ -63,16 +73,16 @@ export const MailingListButton = styled('button')`
   font-size: 1.375rem;
   font-style: normal;
   font-weight: 900;
-  line-height: 1.7875rem; /* 130% */
   color: #ffffff;
   font-family: ${fontFamily};
 
   width: 100%;
   border: 5px solid #edf3f5;
+  border-radius: 1.5rem;
   padding: 0.625rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 16px 30px rgb(23 31 114 / 20%);
+  box-shadow: 0 8px 30px rgb(23 31 114 / 20%);
 
   &:hover,
   &:active {
@@ -85,16 +95,20 @@ export const MailingListButton = styled('button')`
   }
 `;
 
-export const CheckboxContainer = styled('div')`
+export const CheckboxContainer = styled('label')`
   display: flex;
-  padding-top: 1rem;
 `;
 
-export const CheckboxLabel = styled('label')`
+export const CheckboxLabel = styled('p')`
   text-align: left;
-  width: 900%;
-  font-size: 0.5rem;
+  width: 100%;
+  font-size: 0.7777rem;
+  line-height: 0.8888rem;
   font-weight: 100;
   color: #ffffff;
-  padding-left: 0.5rem;
+
+  @media only screen and (max-width: 414px) {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
 `;

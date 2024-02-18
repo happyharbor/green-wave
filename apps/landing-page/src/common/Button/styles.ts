@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { fontFamily, primaryColor, secondaryColor } from '../../styles/styles';
-import { ButtonType } from '../types.ts';
+import { ButtonType } from './index.tsx';
 
 const width = (type: ButtonType) => {
   switch (type) {

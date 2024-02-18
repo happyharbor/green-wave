@@ -117,18 +117,8 @@ export const Styles = createGlobalStyle`
                     calc(3*100%/3) 0;
         }
     }
-    
+
     h3{
-        font-size: 1.375rem;
-        font-weight: 600;
-        margin: 0;
-
-        @media only screen and (max-width: 414px) {
-            font-size: 1.125rem;
-        }
-    }
-
-    h4{
         font-size: 1.5rem;
         font-weight: 900;
         margin: 0;
@@ -139,6 +129,16 @@ export const Styles = createGlobalStyle`
         }
     }
 
+    h4{
+        font-size: 1.375rem;
+        font-weight: 600;
+        margin: 0;
+
+        @media only screen and (max-width: 414px) {
+            font-size: 1.125rem;
+        }
+    }
+    
     p {
         color: ${paragraphFontColor};
         font-size: 1.125rem;

@@ -6,7 +6,7 @@ import { ContentImageStyle, ContentWrapper, TrustedByBlockSection } from './styl
 const TrustedByBlock = ({ t }: TranslationProps) => {
   return (
     <TrustedByBlockSection>
-      <h3>{t('Trusted by')}</h3>
+      <h4>{t('Trusted by')}</h4>
       <ContentWrapper>
         <ContentImage image={'colore.avif'} width={6.8675} height={1.63875}></ContentImage>
         <ContentImage image={'beach_born.avif'} width={6.8675} height={2.74625}></ContentImage>

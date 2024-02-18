@@ -47,7 +47,7 @@ const ContentContainer = ({ t, Icon, title, content }: WhyUsContentProps) => {
   return (
     <ContentContainerStyle>
       <Icon size={100} />
-      <h4>{t(title)}</h4>
+      <h3>{t(title)}</h3>
       <Content>{t(content)}</Content>
     </ContentContainerStyle>
   );

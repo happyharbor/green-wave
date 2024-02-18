@@ -1,20 +1,10 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { secondaryColor } from '../../styles/styles';
+import { primaryColor, secondaryColor } from '../../styles/styles';
 
 export const FooterSection = styled('footer')`
   background: rgb(241, 242, 243);
   padding: 2.5rem 0;
-`;
-
-export const Title = styled('h4')`
-  font-size: 22px;
-  text-transform: capitalize;
-  color: #18216d;
-
-  @media screen and (max-width: 414px) {
-    padding: 1.5rem 0;
-  }
 `;
 
 export const NavLink = styled(Link)`
@@ -31,7 +21,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const Extra = styled('section')`
-  background: ${secondaryColor};
+  background: ${primaryColor};
   position: relative;
   width: 100%;
   margin-right: auto;

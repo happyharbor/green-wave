@@ -1,5 +1,6 @@
 import { Zoom } from 'react-awesome-reveal';
 import { withTranslation } from 'react-i18next';
+import { Checkbox } from '../../common/CheckBox';
 import Input from '../../common/Input';
 import { TranslationProps } from '../../common/types';
 import validate from '../../common/utils/mailingListValidationRules';
@@ -33,7 +34,6 @@ const Contact = ({ t }: TranslationProps) => {
     <MailingContainer>
       <Header>{t('Follow Up')}</Header>
       <Content>{t('FollowUpContent')}</Content>
-      <Content>{t("Don't Leave Me Out")}</Content>
       <FormGroup autoComplete="on" onSubmit={handleSubmit}>
         <Input
           type="text"
@@ -63,7 +63,7 @@ const Contact = ({ t }: TranslationProps) => {
           </MailingListButton>
         </ButtonContainer>
         <CheckboxContainer>
-          <input type="checkbox" name="consent" onChange={handleChange} checked={values.consent} />
+          <Checkbox name="consent" onChange={handleChange} checked={values.consent} />
           <CheckboxLabel>{t('Consent')}</CheckboxLabel>
         </CheckboxContainer>
         <ValidationType type="consent" />

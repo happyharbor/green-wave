@@ -1,7 +1,7 @@
 import { withTranslation } from 'react-i18next';
-import { Button } from '../../common/Button';
+import { Button, ButtonType } from '../../common/Button';
 import { ButtonSection } from '../../common/Button/styles';
-import { ButtonType, PageBlockProps } from '../../common/types';
+import { PageBlockProps } from '../../common/types';
 import { gScrollTo } from '../../common/utils/scroll';
 import { ContentWrapper, IntroBlockSection } from './styles';
 
