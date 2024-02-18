@@ -82,7 +82,7 @@ export const Span = styled('span')`
   }
 `;
 
-export const LanguageSwitch = styled('div')<any>`
+export const LanguageSwitch = styled('div')<{ onClick: React.MouseEventHandler }>`
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 
@@ -98,6 +98,7 @@ export const LanguageSwitchContainer = styled('div')`
   display: flex;
   justify-content: space-between;
   position: relative;
+  gap: 0.625rem;
 `;
 
 export const HeaderContainer = styled('div')`

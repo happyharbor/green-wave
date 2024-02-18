@@ -59,17 +59,16 @@ const Header = ({ t, id }: PageBlockProps) => {
           <CustomNavLinkSmall onClick={() => scrollTo('contact')}>
             <Span>{t('Contact')}</Span>
           </CustomNavLinkSmall>
+
           <CustomNavLinkSmall>
-            <Span>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => i18n.changeLanguage('en')}>
-                  <SvgIcon src="united-kingdom.svg" aria-label="homepage" width="48px" height="48px" />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => i18n.changeLanguage('gr')}>
-                  <SvgIcon src="greece.svg" aria-label="homepage" width="48px" height="48px" />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
-            </Span>
+            <LanguageSwitchContainer>
+              <Span>
+                <LanguageSwitch onClick={() => i18n.changeLanguage('en')}>EN</LanguageSwitch>
+              </Span>
+              <Span>
+                <LanguageSwitch onClick={() => i18n.changeLanguage('gr')}>GR</LanguageSwitch>
+              </Span>
+            </LanguageSwitchContainer>
           </CustomNavLinkSmall>
         </MenuItemContainer>
       </Visible>

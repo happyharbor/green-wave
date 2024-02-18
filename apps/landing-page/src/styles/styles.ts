@@ -9,13 +9,6 @@ export const fontFamily = "'Roboto', sans-serif";
 
 export const Styles = createGlobalStyle`
 
-    @font-face {
-        font-family: "Roboto";
-        src: url("https://fonts.googleapis.com/css?family=Roboto:100,400,500,600,700,800,900&display=swap") format("truetype");
-        font-style: normal;
-        font-display: swap;
-    }
-
     a {
     }
 

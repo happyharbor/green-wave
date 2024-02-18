@@ -7,6 +7,7 @@ const Input = ({ name, placeholder, onChange, optional, value, idPrefix, t }: In
     <StyledInput
       placeholder={`${t(placeholder)}${optional ? '' : '*'}`}
       value={value}
+      autoComplete={'on'}
       name={name}
       id={idPrefix + name}
       onChange={onChange}
