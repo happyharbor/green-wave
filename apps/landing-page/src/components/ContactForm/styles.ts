@@ -24,7 +24,7 @@ export const FormGroup = styled('form')`
   }
 `;
 
-export const Span = styled('span')<any>`
+export const Span = styled('span')<{ erros: string | undefined }>`
   display: block;
   font-weight: 600;
   color: ${secondaryColor};

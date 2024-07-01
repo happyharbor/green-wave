@@ -1,7 +1,7 @@
 import { MailingListValidateErrors, MailingListValidateProps } from '../types';
 
 export default (values: MailingListValidateProps) => {
-  let errors: MailingListValidateErrors = {};
+  const errors: MailingListValidateErrors = {};
 
   if (!values.name) {
     errors.name = 'Name is required';

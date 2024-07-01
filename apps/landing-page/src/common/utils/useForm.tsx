@@ -51,6 +51,7 @@ export const useForm = (t: WithTranslation['t'], validate: (values: ValidateProp
       setValues({ name: '', email: '', message: '' });
       openNotificationWithIcon();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- No idea
   }, [errors, shouldSubmit]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {

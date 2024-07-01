@@ -7,7 +7,6 @@
 // npm install @calcom/embed-react
 import { lazy, useEffect } from 'react';
 import { withTranslation } from 'react-i18next';
-// @ts-ignore
 import Cal, { getCalApi } from '@calcom/embed-react';
 import { PageBlockProps } from '../../common/types';
 import { primaryColor } from '../../styles/styles';

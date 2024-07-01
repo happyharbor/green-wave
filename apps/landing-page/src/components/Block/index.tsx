@@ -1,10 +1,10 @@
-import { withTranslation } from 'react-i18next';
+import { WithTranslation, withTranslation } from 'react-i18next';
 import { Container, Content, TextWrapper } from './styles';
 
 interface Props {
   title: string;
   content: string;
-  t: any;
+  t: WithTranslation['t'];
 }
 
 const Block = ({ title, content, t }: Props) => {
